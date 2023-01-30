@@ -60,9 +60,12 @@ k2$value = apply(k2,1,function(x) ifelse(as.numeric(x[[x[["level"]]]])==0,0,as.n
 nozeroos = dtc[apply(dtc[,8:13]==0,1,sum)==0,"V1"]
 
 ks = dcast(data=k2[,c("level","m","variable","value","V3")],
-           formula = level+m+cut(V3,c(0,0.001,0.02,0.06,0.12,0.16,0.22,0.35),right=F)~variable,
+           formula = cut(V3,c(0,0.001,0.02,0.06,0.12,0.16,0.22,0.35),right=F)+level+m~variable,
           value.var = "value",fun.aggregate = sum)
-names(ks)[3]="bin"
+names(ks)[1]="bin"
+ks$s = apply(ks,1,function(x) sum(as.numeric(x[4:7])))
+ks
+
 #ks=ks[ks$level!="kingdom",]
 #ks$variable=factor(ks$variable,c("kingdom" ,"phylum", "class", "order" ,"family", "genus" ,"species"))
 
@@ -121,11 +124,24 @@ ggsave("ROC.pdf",width=7,height = 5)
 ggplot(aes(y=TP/(TP+FN),x=TP/(TP+FP)),
        data=ks)+
   geom_line(aes(group=m,linetype=m),size=0.7)+
-  geom_point(aes(color=bin),size=2)+
+  geom_point(aes(color=bin,shape=m),size=2)+
   facet_wrap(~level)+
+  scale_color_brewer(palette = "Dark2",name="")+
+  scale_shape(name="")+
+  scale_linetype(name="")+
+  geom_line(aes(group=bin),color="grey50",alpha=0.5,size=0.2)+
+  theme_classic()+xlab("Precision")+ylab("Recall")+
+  theme(legend.position = "bottom",legend.direction = "horizontal")
+ggsave("precision-recall-methods.pdf",width=7,height = 6)
+
+
+ggplot(aes(y=TP/(TP+FN),x=TP/(TP+FP)), data=ks)+
+  geom_line(aes(group=m,linetype=m),size=0.7)+
+  geom_point(aes(color=level),size=2)+
+  facet_wrap(~bin)+
   scale_color_brewer(palette = "Dark2",name="")+
   scale_shape(name="")+
   scale_linetype(name="")+
   theme_classic()+xlab("Precision")+ylab("Recall")+
   theme(legend.position = "bottom",legend.direction = "horizontal")
-ggsave("precision-recall-methods.pdf",width=7,height = 6)
+ggsave("precision-recall-methods2.pdf",width=7,height = 6)
