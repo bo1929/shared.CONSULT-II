@@ -112,9 +112,10 @@ ggplot(aes(x=bin,y=2*TP/(2*TP+FP+FN),
   theme(legend.position = "bottom" ,
         axis.text.x = element_text(angle=90,hjust=1),
         legend.box.margin = margin(0),
+        legend.margin = margin(0),
         )+ # c(0.1,0.3))+
   xlab("Distance to closest")+ylab("F1")
-ggsave("F1.pdf",width=6.5,height = 5)
+ggsave("F1.pdf",width=7,height = 5)
 
 
 
