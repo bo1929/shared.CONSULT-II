@@ -70,55 +70,57 @@ ks
 #ks$variable=factor(ks$variable,c("kingdom" ,"phylum", "class", "order" ,"family", "genus" ,"species"))
 
 
-ggplot(aes(x=bin,y=TP/(TP+FN),color=level),data=ks)+
-  stat_summary()+
-  stat_summary(aes(group=level),geom="line")+
+ggplot(aes(x=bin,y=TP/(TP+FN),
+           color=m,linetype=m,shape=m),data=ks)+
+  geom_point()+
+  facet_wrap(~level)+
+  geom_line(aes(group=interaction(m)))+
   scale_color_brewer(palette = "Dark2",name="")+
   theme_classic()+
-  theme(legend.position = c(0.1,0.3))+
+  scale_shape(name="")+
+  theme(legend.position = "bottom" ,
+        axis.text.x = element_text(angle=90))+ # c(0.1,0.3))+
   xlab("Distance to closest")+ylab("Recall")
 ggsave("recall.pdf",width=6.5,height = 4.5)
 
-ggplot(aes(x=bin,y=TP/(TP+FP),color=level),data=ks)+
-  stat_summary()+
-  stat_summary(aes(group=level),geom="line")+
+
+ggplot(aes(x=bin,y=TP/(TP+FP),
+           color=m,linetype=m,shape=m),data=ks)+
+  geom_point()+
+  facet_wrap(~level)+
+  geom_line(aes(group=interaction(m)))+
   scale_color_brewer(palette = "Dark2",name="")+
   theme_classic()+
-  theme(legend.position = c(0.1,0.3))+
+  scale_shape(name="")+
+  theme(legend.position = "bottom" ,
+        axis.text.x = element_text(angle=90))+ # c(0.1,0.3))+
   xlab("Distance to closest")+ylab("Precision")
 ggsave("precision.pdf",width=6.5,height = 4.5)
 
-
-ggplot(aes(x=bin,y=2*TP/(2*TP+FP+FN),color=level),data=ks)+
-  stat_summary()+
-  stat_summary(aes(group=level),geom="line")+
+ggplot(aes(x=bin,y=2*TP/(2*TP+FP+FN),
+           color=m,linetype=m,shape=m),data=ks)+
+  geom_point()+
+  facet_wrap(~level)+
+  geom_line(aes(group=interaction(m)))+
   scale_color_brewer(palette = "Dark2",name="")+
   theme_classic()+
-  theme(legend.position = c(0.1,0.3))+
+  scale_shape(name="")+
+  scale_linetype(name="")+
+  theme(legend.position = "bottom" ,
+        axis.text.x = element_text(angle=90))+ # c(0.1,0.3))+
   xlab("Distance to closest")+ylab("F1")
 ggsave("F1.pdf",width=6.5,height = 4.5)
 
 
 
-ggplot(aes(y=TP/(TP+FN),x=TP/(TP+FP),color=bin,shape=level),data=ks)+
+ggplot(aes(y=TP/(TP+FN),x=TP/(TP+FP),color=bin,shape=level,linetype=m),data=ks)+
   stat_summary()+
-  stat_summary(aes(group=bin),geom="line")+
+  stat_summary(aes(group=interaction(bin,m)),geom="line")+
   scale_color_brewer(palette = "Dark2",name="")+
   scale_shape(name="")+
   theme_classic()+xlab("Precision")+ylab("Recall")+
   theme(legend.position = "bottom",legend.direction = "horizontal")
 ggsave("precision-recall.pdf",width=7,height = 5)
-
-
-
-ggplot(aes(x=FP/(TN+FP),y=TP/(TP+FN),color=bin,shape=level),data=ks)+
-  stat_summary()+
-  stat_summary(aes(group=bin),geom="line")+
-  scale_color_brewer(palette = "Dark2",name="")+
-  scale_shape_discrete(name="")+
-  theme_classic()+xlab("FPR")+ylab("TPR")#+
-  theme(legend.position = c(0.2,0.7),legend.direction = "horizontal")
-ggsave("ROC.pdf",width=7,height = 5)
 
 
 ggplot(aes(y=TP/(TP+FN),x=TP/(TP+FP)),
@@ -137,11 +139,12 @@ ggsave("precision-recall-methods.pdf",width=7,height = 6)
 
 ggplot(aes(y=TP/(TP+FN),x=TP/(TP+FP)), data=ks)+
   geom_line(aes(group=m,linetype=m),size=0.7)+
-  geom_point(aes(color=level),size=2)+
+  geom_point(aes(color=level,shape=m),size=2)+
   facet_wrap(~bin)+
   scale_color_brewer(palette = "Dark2",name="")+
   scale_shape(name="")+
   scale_linetype(name="")+
+  geom_line(aes(group=level),color="grey50",alpha=0.5,size=0.2)+
   theme_classic()+xlab("Precision")+ylab("Recall")+
   theme(legend.position = "bottom",legend.direction = "horizontal")
 ggsave("precision-recall-methods2.pdf",width=7,height = 6)
