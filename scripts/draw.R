@@ -78,10 +78,11 @@ ggplot(aes(x=bin,y=TP/(TP+FN),
   scale_color_brewer(palette = "Dark2",name="")+
   theme_classic()+
   scale_shape(name="")+
+  scale_linetype(name="")+
   theme(legend.position = "bottom" ,
         axis.text.x = element_text(angle=90))+ # c(0.1,0.3))+
   xlab("Distance to closest")+ylab("Recall")
-ggsave("recall.pdf",width=6.5,height = 4.5)
+ggsave("recall.pdf",width=6.5,height = 5)
 
 
 ggplot(aes(x=bin,y=TP/(TP+FP),
@@ -92,10 +93,11 @@ ggplot(aes(x=bin,y=TP/(TP+FP),
   scale_color_brewer(palette = "Dark2",name="")+
   theme_classic()+
   scale_shape(name="")+
+  scale_linetype(name="")+
   theme(legend.position = "bottom" ,
         axis.text.x = element_text(angle=90))+ # c(0.1,0.3))+
   xlab("Distance to closest")+ylab("Precision")
-ggsave("precision.pdf",width=6.5,height = 4.5)
+ggsave("precision.pdf",width=6.5,height = 5)
 
 ggplot(aes(x=bin,y=2*TP/(2*TP+FP+FN),
            color=m,linetype=m,shape=m),data=ks)+
@@ -109,7 +111,7 @@ ggplot(aes(x=bin,y=2*TP/(2*TP+FP+FN),
   theme(legend.position = "bottom" ,
         axis.text.x = element_text(angle=90))+ # c(0.1,0.3))+
   xlab("Distance to closest")+ylab("F1")
-ggsave("F1.pdf",width=6.5,height = 4.5)
+ggsave("F1.pdf",width=7,height = 5)
 
 
 
