@@ -37,7 +37,11 @@ c=read.csv('consult_results.csv')
 c = dcast(data=melt(c[2:9],id.vars = 1:2),formula = variable+genome~value)
 c$m= "CONSULT-II"
 head(c)
-b=rbind(k,c)
+cl=read.csv('CLARK-bacteria-eval.csv')
+cl = dcast(data=melt(cl[2:9],id.vars = 1:2),formula = variable+genome~value)
+head(cl)
+cl$m= "CLARK"
+b=rbind(k,c,cl)
 head(b)
 
 k2 = merge(dtc[,1:13],b,by.x = "V1",by.y="genome")
@@ -64,6 +68,7 @@ ks = dcast(data=k2[,c("level","m","variable","value","V3")],
           value.var = "value",fun.aggregate = sum)
 names(ks)[1]="bin"
 ks$s = apply(ks,1,function(x) sum(as.numeric(x[4:7])))
+ks$m = factor(ks$m,levels=c("CONSULT-II", "Kraken-II","CLARK"))
 ks
 
 #ks=ks[ks$level!="kingdom",]
@@ -85,6 +90,8 @@ ggplot(aes(x=bin,y=TP/(TP+FN),
 ggsave("recall.pdf",width=6.5,height = 5)
 
 
+
+
 ggplot(aes(x=bin,y=TP/(TP+FP),
            color=m,linetype=m,shape=m),data=ks)+
   geom_point()+
@@ -101,9 +108,9 @@ ggsave("precision.pdf",width=6.5,height = 5)
 
 ggplot(aes(x=bin,y=2*TP/(2*TP+FP+FN),
            color=level,linetype=m,shape=m),data=ks)+
-  geom_point()+
+  geom_point(alpha=0.7)+
   facet_wrap(~floor((as.numeric(ks$level))/2.5),
-            labeller = function(x) {x[1,]="Low";x[1,]="Medium";x[3,]="High"})+
+        labeller = function(x) {x[1,1]="High resolution";x[2,1]="Medium resolution";x[3,1]="Low resolution";x})+
   geom_line(aes(group=interaction(m,level)))+
   scale_color_brewer(palette = "Dark2",name="")+
   theme_classic()+
@@ -115,7 +122,7 @@ ggplot(aes(x=bin,y=2*TP/(2*TP+FP+FN),
         legend.margin = margin(0),
         )+ # c(0.1,0.3))+
   xlab("Distance to closest")+ylab("F1")
-ggsave("F1.pdf",width=7,height = 5)
+ggsave("F1.pdf",width=7,height = 4.5)
 
 
 
@@ -132,15 +139,20 @@ ggsave("precision-recall.pdf",width=7,height = 5)
 ggplot(aes(y=TP/(TP+FN),x=TP/(TP+FP)),
        data=ks)+
   geom_line(aes(group=m,linetype=m),size=0.7)+
-  geom_point(aes(color=bin,shape=m),size=2)+
+  geom_point(aes(color=bin,shape=m),size=2,alpha=0.7)+
   facet_wrap(~level)+
-  scale_color_brewer(palette = "Dark2",name="")+
+  scale_color_brewer(palette = "Paired",name="")+
   scale_shape(name="")+
   scale_linetype(name="")+
   geom_line(aes(group=bin),color="grey50",alpha=0.5,size=0.2)+
   theme_classic()+xlab("Precision")+ylab("Recall")+
-  theme(legend.position = "bottom",legend.direction = "horizontal")
-ggsave("precision-recall-methods.pdf",width=7,height = 6)
+  theme(legend.position = "bottom",
+        legend.direction = "horizontal",
+        legend.box.margin = margin(0),
+        legend.margin = margin(0))+
+  guides(linetype=guide_legend(nrow=2, byrow=TRUE),
+         shape=guide_legend(nrow=2, byrow=TRUE))
+ggsave("precision-recall-methods.pdf",width=7,height = 5)
 
 
 ggplot(aes(y=TP/(TP+FN),x=TP/(TP+FP)), data=ks)+
