@@ -138,13 +138,13 @@ ggsave("precision-recall.pdf",width=7,height = 5)
 
 ggplot(aes(y=TP/(TP+FN),x=TP/(TP+FP)),
        data=ks)+
-  geom_line(aes(group=m,linetype=m),size=0.7)+
+  #geom_path(aes(group=m,linetype=m),size=0.3)+
+  geom_path(aes(group=bin),color="grey50",alpha=0.5,size=0.3)+
   geom_point(aes(color=bin,shape=m),size=2,alpha=0.7)+
   facet_wrap(~level)+
   scale_color_brewer(palette = "Paired",name="")+
   scale_shape(name="")+
   scale_linetype(name="")+
-  geom_line(aes(group=bin),color="grey50",alpha=0.5,size=0.2)+
   theme_classic()+xlab("Precision")+ylab("Recall")+
   theme(legend.position = "bottom",
         legend.direction = "horizontal",
