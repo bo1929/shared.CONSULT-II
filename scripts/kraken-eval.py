@@ -69,7 +69,10 @@ def calc(result_file):
                     results_kraken[taxa].append("FN")
                     missed = True
             else:
-                results_kraken[taxa].append("?")
+                if (idx > 0) :
+                    results_kraken[taxa].append(results_kraken[tax_order[idx-1]][-1])
+                else:
+                    results_kraken[taxa].append("?")
     return pd.DataFrame(results_kraken)
 
 pool = multiprocessing.Pool(96)

@@ -66,7 +66,10 @@ def calc(result_file):
                     results_consult[taxa].append("FN")
                     missed = True
             else:
-                results_consult[taxa].append("?")
+                if (idx > 0) :
+                    results_consult[taxa].append(results_consult[tax_order[idx-1]][-1])
+                else:
+                    results_consult[taxa].append("?")
     return pd.DataFrame(results_consult)
 
 pool = multiprocessing.Pool(96)
