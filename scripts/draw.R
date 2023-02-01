@@ -203,9 +203,9 @@ ggsave("precision-recall-methods2.pdf",width=7,height = 6)
 
 ggplot(aes(x=V3,y=2*TP/(2*TP+FP+FN),
            color=level,
-           linetype=factor(m,levels=c("CONSULT-II", "Kraken-II","CLARK")),
-              shape=factor(m,levels=c("CONSULT-II", "Kraken-II","CLARK"))),
-       data= dcast(data=k2[,c("level","m","variable","value","V3")], formula = V3+level+m~variable,
+           linetype=factor(m,levels=c("CONSULT-II (0.03)", "Kraken-II","CLARK")),
+              shape=factor(m,levels=c("CONSULT-II (0.03)", "Kraken-II","CLARK"))),
+       data= dcast(data=k2[!grepl("0[01]",k2$m ),c("level","m","variable","value","V3")], formula = V3+level+m~variable,
                    value.var = "value",fun.aggregate = sum))+
   geom_point(alpha=0.7)+
   facet_wrap(~level#, 
@@ -226,7 +226,7 @@ ggplot(aes(x=V3,y=2*TP/(2*TP+FP+FN),
   xlab("Distance to closest")+ylab("F1")+
   guides(linetype=guide_legend(nrow=2, byrow=TRUE),
          shape=guide_legend(nrow=2, byrow=TRUE))
-ggsave("F1-nobin.pdf",width=7,height = 5)
+ggsave("F1-nobin.pdf",width=6,height = 7.5)
 
 km = dcast(data=k2[,c("level","m","variable","value","V3")], formula = V3+level+m~variable,
       value.var = "value",fun.aggregate = sum)
