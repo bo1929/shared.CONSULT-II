@@ -28,27 +28,35 @@ ggsave("query-groups.pdf",width = 5,height = 6)
 
 unique(tax$phylum)
 
-head(dtc)
-k=read.csv('kraken_results.csv')
-k = dcast(data=melt(k[2:9],id.vars = 1:2),formula = variable+genome~value)
-k$m= "Kraken-II"
+
+
+dom="archaea"
+
+k = read.csv(paste('KrakenII',dom,'eval.csv',sep="-"))
+k = dcast(data=melt(k[1:8],id.vars = 1:2),formula = variable+genome~value)
+k$m = "Kraken-II"
 head(k) 
-cl=read.csv('CLARK-bacteria-eval.csv')
-cl = dcast(data=melt(cl[2:9],id.vars = 1:2),formula = variable+genome~value)
+cl = read.csv(paste('CLARK',dom,'eval.csv',sep="-"))
+cl = dcast(data=melt(cl[1:8],id.vars = 1:2),formula = variable+genome~value)
+cl$m = "CLARK"
 head(cl)
-cl$m= "CLARK"
 readcons = function(f,n) {
   c=read.csv(f)
-  c = c[,c(1:3,6:12)]
-  c = dcast(data=melt(c[2:9],id.vars = 1:2),formula = variable+genome~value)
+  head(c)
+  c = c[,c(1:2,5:11)]
+  c = dcast(data=melt(c[1:8],id.vars = 1:2),formula = variable+genome~value)
   c$m = n
   c
 }
-c01 = readcons('CONSULT-bacteria-eval-th05_d1_c001.csv','CONSULT-II (0.01)')
-c03 = readcons('CONSULT-bacteria-eval-th05_d1_c003.csv','CONSULT-II (0.03)')
-c = readcons('CONSULT-bacteria-eval-th05_d1.csv','CONSULT-II (0.00)')
+c01 = readcons(paste('CONSULT',dom,'eval-th05_d1_c001.csv',sep="-"),'CONSULT-II (0.01)')
+head(c01)
+c03 = readcons(paste('CONSULT',dom,'eval-th05_d1_c003.csv',sep="-"),'CONSULT-II (0.03)')
+c = readcons(paste('CONSULT',dom,'eval-th05_d1_c000.csv',sep="-"),'CONSULT-II (0.00)')
 b=rbind(k,c01,c03,c,cl)
 head(b)
+
+
+############################## For either
 
 k2 = merge(dtc[,1:13],b,by.x = "V1",by.y="genome")
 head(k2)
@@ -58,16 +66,8 @@ k2=melt(k2,measure.vars = c("FN","FP","TN","TP"))
 head(k2)
 k2$value = apply(k2,1,function(x) ifelse(as.numeric(x[[x[["level"]]]])==0,0,as.numeric(x[["value"]])))
 
-#k = merge(k,tax[,1:10],by.x="V1",by.y="igenome")
-#k2=k
-#k2$phylum = ifelse(k2$iphylum == 0, NA, k$phylum)
-#k2$class = ifelse(k$iclass == 0, NA, k$class)
-#k2$order = ifelse(k$iorder == 0, NA, k$order)
-#k2$family = ifelse(k$ifamily == 0, NA, k$family)
-#k2$genus = ifelse(k$igenus == 0, NA, k$genus)
-#head(k2)
 
-nozeroos = dtc[apply(dtc[,8:13]==0,1,sum)==0,"V1"]
+#nozeroos = dtc[apply(dtc[,8:13]==0,1,sum)==0,"V1"]
 
 ks = dcast(data=k2[,c("level","m","variable","value","V3")],
            formula = cut(V3,c(0,0.001,0.02,0.06,0.12,0.16,0.22,0.35),right=F)+level+m~variable,
@@ -77,8 +77,6 @@ ks$s = apply(ks,1,function(x) sum(as.numeric(x[4:7])))
 ks$m = factor(ks$m,levels=c("CONSULT-II (0.00)","CONSULT-II (0.01)","CONSULT-II (0.03)", "Kraken-II","CLARK"))
 ks
 
-#ks=ks[ks$level!="kingdom",]
-#ks$variable=factor(ks$variable,c("kingdom" ,"phylum", "class", "order" ,"family", "genus" ,"species"))
 
 
 ggplot(aes(x=bin,y=2*TP/(2*TP+FP+FN),
@@ -226,7 +224,7 @@ ggplot(aes(x=V3,y=2*TP/(2*TP+FP+FN),
   xlab("Distance to closest")+ylab("F1")+
   guides(linetype=guide_legend(nrow=2, byrow=TRUE),
          shape=guide_legend(nrow=2, byrow=TRUE))
-ggsave("F1-nobin.pdf",width=6,height = 7.5)
+ggsave("F1-nobin.pdf",width=6,height = 6.5)
 
 km = dcast(data=k2[,c("level","m","variable","value","V3")], formula = V3+level+m~variable,
       value.var = "value",fun.aggregate = sum)
@@ -234,10 +232,9 @@ head(km)
 with(km, km[m=="Kraken-II"&V3<0.02&TP/(TP+FN) < 0.3 ,])
 
 
-cvv = read.csv('CONSULT-bacteria-eval-th05_d1.csv',sep=",",he=T)
+cvv = read.csv('CONSULT-bacteria-eval-th05_d1_c000.csv',sep=",",he=T)
 head(cvv)
-cvv = melt(cvv,id.vars = 1:5)
-cvv = cvv[cvv$variable!="superkingdom",]
+cvv = melt(cvv[,1:10],id.vars = 1:4)
 cvvp = cvv[cvv$value%in% c("TP","FP"),]
 cvvn = cvv[!cvv$value%in% c("TP","FP"),]
 #dcast(data=cvv,formula=cut(V,5)+)
@@ -254,6 +251,7 @@ ggplot(aes(x=vote,color=variable,linetype=value),data=cvvp)+
   scale_color_brewer(palette = "Dark2",name="")
   #scale_color_manual(values=c("#AA3333","#22DD55","#DD6666","#225599"),name="")
 ggsave("votes.pdf",width=7,height=5.5)
+ggsave("votes.png",width=7,height=5.5)
 
 ggplot(aes(x=vote,color=variable,linetype=value),data=cvvn)+
   stat_ecdf()+
@@ -279,6 +277,7 @@ ggplot(aes(x=vote,color=variable,linetype=value),data=cvvp)+
   annotate("rect", xmin = 0.003, xmax = 0.03, ymin = 0, ymax = 1, alpha = .1)+
   scale_color_brewer(palette = "Dark2",name="")
 ggsave("votes.pdf",width=7,height=5.5)
+ggsave("votes.png",width=7,height=5.5)
 
 
 ggplot(aes(x=log10(vote),y=vote_n),data=cvvp)+
@@ -303,6 +302,7 @@ ggplot(aes(x=vote_n,color=variable,linetype=value),data=cvvp)+
   coord_cartesian(xlim= c(0.4995,1.001))+
   theme(legend.position = "none")
 ggsave("votesnorm.pdf",width=8.8,height=5.5)
+ggsave("votesnorm.png",width=8.8,height=5.5)
 
   e = 0.3 * diff(range(cvv$vote))
   
