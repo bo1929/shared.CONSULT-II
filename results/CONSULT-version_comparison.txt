@@ -1,0 +1,14 @@
+CONSULT_I_t1-mapping_time: 12:08.79
+CONSULT_I_t1-search_time: 9:28.81
+CONSULT_I_t1-mapping_peak_memory: 64416636
+CONSULT_I_t1-search_peak_memory: 62765524
+CONSULT_II_t1-mapping_time: 0:12.57
+CONSULT_II_t1-search_time: 1:21.95
+CONSULT_II_t4-search_time: 0:23.40
+CONSULT_II_t8-search_time: 0:12.64
+CONSULT_II_t12-search_time: 0:08.66
+CONSULT_II_t1-mapping_peak_memory: 250944
+CONSULT_II_t1-search_peak_memory: 200984
+CONSULT_II_t4-search_peak_memory: 201212
+CONSULT_II_t8-search_peak_memory: 201304
+CONSULT_II_t12-search_peak_memory: 201480
