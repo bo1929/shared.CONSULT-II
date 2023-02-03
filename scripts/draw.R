@@ -1,17 +1,22 @@
 require(reshape2); require(ggplot2)
 
 
-dtc=read.csv('dist-to-closest.txt',sep="\t",he=F)
+dom="archaea"
+dtc=read.csv(paste('dist',dom,'to-closest.txt',sep="-"),sep="\t",he=F)
 dtc$V1 = sub(".fna","",dtc$V1)
 tax=read.csv('rank_queries.tsv',sep="\t")
-dtc = merge(dtc,tax,by.x="V1",by.y="genome")
+dtc=merge(dtc,tax,by.x="V1",by.y="genome")
 nrow(dtc)
 
-summary(cut(dtc$V3,c(0,0.001,0.02,0.06,0.12,0.16,0.22,0.35),right=F))
+baccuts=c(0,0.001,0.02,0.06,0.12,0.16,0.22,0.35)
+arccuts=c(0,0.02,0.05,0.10,0.15,0.25,10)
+cuts=arccuts
+
+summary(cut(dtc$V3,cuts,right=F))
 summary(cut(dtc$V3,c(-0.000001,0.0001,0.02,0.06,0.12,0.16,0.2,0.25,0.5)))
 
 qplot(reorder(sub(".fna","",V1),V3),V3,data=dtc)+theme_classic()+
-  geom_hline(yintercept=c(0.001,0.02,0.06,0.12,0.16,0.22),color="red",linetype=2)+
+  geom_hline(yintercept=bacuts,color="red",linetype=2)+
   theme(axis.text.x=element_text(angle=90))+xlab("qyery")+ylab("Mash distance to cloests")
 ggsave("query-distances.pdf",width=12,height=6)
 
@@ -70,7 +75,7 @@ k2$value = apply(k2,1,function(x) ifelse(as.numeric(x[[x[["level"]]]])==0,0,as.n
 #nozeroos = dtc[apply(dtc[,8:13]==0,1,sum)==0,"V1"]
 
 ks = dcast(data=k2[,c("level","m","variable","value","V3")],
-           formula = cut(V3,c(0,0.001,0.02,0.06,0.12,0.16,0.22,0.35),right=F)+level+m~variable,
+           formula = cut(V3,cuts,right=F)+level+m~variable,
           value.var = "value",fun.aggregate = sum)
 names(ks)[1]="bin"
 ks$s = apply(ks,1,function(x) sum(as.numeric(x[4:7])))
@@ -115,7 +120,7 @@ ggplot(aes(x=bin,y=2*TP/(2*TP+FP+FN),
         legend.margin = margin(0),
   )+ # c(0.1,0.3))+
   xlab("Distance to closest")+ylab("F1")
-ggsave("F1-all.pdf",width=7.3,height = 5.5)
+ggsave(paste("F1",dom,"-all.pdf",sep="-"),width=7.3,height = 5.5)
 
 ggplot(aes(y=TP/(TP+FN),x=TP/(TP+FP),
            color=sub(" .*","",m),#shape=sub(" .*","",m),
@@ -135,7 +140,7 @@ ggplot(aes(y=TP/(TP+FN),x=TP/(TP+FP),
         legend.margin = margin(0))+
   guides(linetype=guide_legend(nrow=1, byrow=TRUE),
          shape=guide_legend(nrow=1, byrow=TRUE))
-ggsave("precision-recall-methods-all.pdf",width=7,height = 5)
+ggsave(paste("precision-recall-methods",dom,"-all.pdf",sep="-"),width=7,height = 5)
 
 
 ggplot(aes(y=TP/(TP+FN),x=TP/(TP+FP)),
@@ -174,7 +179,7 @@ ggplot(aes(y=TP/(TP+FN),x=TP/(TP+FP)),
         legend.margin = margin(0))+
   guides(linetype=guide_legend(nrow=2, byrow=TRUE),
          shape=guide_legend(nrow=2, byrow=TRUE))
-ggsave("precision-recall-methods-03.pdf",width=7.3,height = 5)
+ggsave(paste("precision-recall",dom,"-methods-03.pdf",sep="-"),width=7.3,height = 5)
 
 ggplot(aes(y=TP/(TP+FN),x=TP/(TP+FP),color=bin,shape=level,linetype=m),data=ks)+
   stat_summary()+
