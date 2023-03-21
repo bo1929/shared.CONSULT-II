@@ -1,10 +1,48 @@
-import pandas as pd
-import numpy as np
-from pathlib import Path
+import argparse
 import multiprocessing
+import pandas as pd
+
+from pathlib import Path
 from collections import defaultdict
 
-NUM_THREADS = 96
+parser = argparse.ArgumentParser(description="Evaulates performance of Kraken-II.")
+parser.add_argument(
+    "--results-dir",
+    type=str,
+    required=True,
+)
+parser.add_argument(
+    "--query-ranks-path",
+    type=str,
+    required=True,
+)
+parser.add_argument(
+    "--reference-ranks-path",
+    type=str,
+    required=True,
+)
+parser.add_argument(
+    "--taxonomy-database-path",
+    type=str,
+    required=True,
+)
+parser.add_argument(
+    "--output-dir",
+    type=str,
+    required=False,
+    default="./"
+)
+args = parser.parse_args()
+
+NUM_THREADS = 1
+
+RESULTS_DIR = Path(args.results_dir)
+QUERY_RANKS_PATH =  Path(args.query_ranks_path)
+REFERENCE_RANKS_PATH = Path(args.reference_ranks_path)
+TAXONOMY_DATABASE_PATH = Path(args.taxonomy_database_path)
+OUTPUT_DIR = Path(args.output_dir)
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
 taxa_order = list(
     ["species", "genus", "family", "order", "class", "phylum", "superkingdom"]
 )
@@ -85,21 +123,24 @@ def evaluate_classification(result_file):
 
 
 if __name__ == "__main__":
-    query_ranks = pd.read_csv("../misc/uDance-ranks_tid.tsv", sep="\t")
-    reference_ranks = pd.read_csv("../misc/10kBacteria-ranks_tid.tsv", sep="\t")
+    query_ranks = pd.read_csv(QUERY_RANKS_PATH, sep="\t")
+    reference_ranks = pd.read_csv(REFERENCE_RANKS_PATH, sep="\t")
     reference_taxonomy = pd.read_csv(
-        "../misc/ReferenceTaxonomy-nodes.dmp", sep="|", header=None
+        TAXONOMY_DATABASE_PATH,
+        sep="|",
+        header=None,
+        skipinitialspace=True
     )
-    kraken_result_dir = Path("../results/KrakenII-bacteria/")
-    # Note that we have KrakenII output files with the following with 
-    # filenames as "output_1000x_<GENOME_NAME>.txt".
+    reference_taxonomy = reference_taxonomy.applymap(lambda x: x.strip() if isinstance(x, str) else x)
+
+    kraken_result_dir = Path(RESULTS_DIR)
+    # Note that we have KrakenII output files with filenames: "output_1000x_<GENOME_NAME>.txt".
 
     # Make sure we use superkingdom consistently.
     reference_ranks = reference_ranks.rename(columns={"kingdom": "superkingdom"})
     query_ranks = query_ranks.rename(columns={"kingdom": "superkingdom"})
 
     # Clean whitespaces and newlines etc.
-    reference_taxonomy[2] = reference_taxonomy[2].apply(lambda x: x.strip())
 
     # Set DataFrame indices to genome names.
     query_ranks.index = query_ranks["genome"]
@@ -121,4 +162,4 @@ if __name__ == "__main__":
             ],
         )
     ]
-    pd.concat(all_evaluations[0]).to_csv("../results/KrakenII-bacteria-eval.csv")
+    pd.concat(all_evaluations[0]).to_csv(OUTPUT_DIR / "KrakenII-bacteria-eval.csv")

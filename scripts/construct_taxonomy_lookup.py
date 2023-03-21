@@ -1,10 +1,25 @@
-import pandas as pd
+import csv
+import argparse
 from pathlib import Path
 from collections import defaultdict
 
+parser = argparse.ArgumentParser(description="Creates a taxonomic ancestor lookup table.")
+parser.add_argument(
+    "--input-path",
+    type=str,
+    required=True,
+)
+parser.add_argument(
+    "--output-dir",
+    type=str,
+    required=False,
+    default="./taxonomy_lookup/"
+)
+args = parser.parse_args()
 
-PATH_RANKS = Path("./10kBacteria-ranks_tid.tsv")
-DIR_LOOKUPS = Path("./taxonomy_lookup/")
+
+PATH_RANKS = Path(args.input_path)
+DIR_LOOKUPS = Path(args.output_dir)
 DIR_LOOKUPS.mkdir(parents=True, exist_ok=True)
 
 taxa_levels = ["species", "genus", "family", "order", "class", "phylum", "kingdom"]
@@ -19,19 +34,20 @@ taxa_level_ranks = {
 }
 
 if __name__ == "__main__":
-    ranks_tid = pd.read_csv(PATH_RANKS, sep="\t")
+    with open(PATH_RANKS, 'r', newline='') as csvfile:
+        reader = list(csv.DictReader(csvfile, delimiter="\t"))
     ancestor_lookup = defaultdict(list)
     genome_lookup = defaultdict(int)
     level_lookup = defaultdict(str)
 
-    for i in range(ranks_tid.shape[0]):
-        genome_lookup[ranks_tid.iloc[i]["genome"]] = ranks_tid.iloc[i]["species"]
+    for row_ranks in reader:
+        genome_lookup[row_ranks["genome"]] = row_ranks["species"]
         for ix, taxa1 in enumerate(taxa_levels[:]):
-            tid1 = ranks_tid.iloc[i][taxa1]
-            if tid1 not in ancestor_lookup.keys():
+            tid1 = row_ranks[taxa1]
+            if tid1 not in ancestor_lookup.keys() and tid1 != 0:
                 for taxa2 in taxa_levels[ix:]:
-                    ancestor_lookup[tid1].append(ranks_tid.iloc[i][taxa2])
-                level_lookup[ranks_tid.iloc[i][taxa1]] = taxa1
+                    ancestor_lookup[tid1].append(row_ranks[taxa2])
+                level_lookup[row_ranks[taxa1]] = taxa1
             else:
                 break
 
