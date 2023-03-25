@@ -5,7 +5,7 @@ import pandas as pd
 from pathlib import Path
 from collections import defaultdict
 
-parser = argparse.ArgumentParser(description="Evaulates performance of Kraken-II.")
+parser = argparse.ArgumentParser(description="Evaulates performance of the tool CLARK.")
 parser.add_argument(
     "--results-dir",
     type=str,
@@ -56,67 +56,62 @@ taxa_order_rank = {
     "species": 0,
 }
 
+
 def evaluate_classification(result_file):
     evaluation_dict = defaultdict(list)
 
     # example filename : output_1000x_G000251165.txt
-    genome = result_file.stem.split("_")[-1]
+    genome = result_file.stem.split("_")[-1].split(".")[0]
     true_taxa = query_ranks.loc[genome]
 
     with open(result_file) as f:
-        all_reads = f.readlines()
-    for read_line in all_reads:
-        read_name = read_line.split("\t")[1]
-        is_classified = read_line.split("\t")[0]
-        pred_tID = int(read_line.split("\t")[2])
+        lines = f.readlines()
+    for read_line in list(lines)[1:]:
+        read_line_cols = read_line.strip().split(",")
+        pred_tID = read_line_cols[-1]
 
         pred_taxa = {}
         rank = None
 
-        if is_classified != "U":
-            parent, rank = (
-                reference_taxonomy.at[pred_tID, 1],
-                reference_taxonomy.at[pred_tID, 2],
-            )
+        if pred_tID != "NA":
+            pred_tID = int(pred_tID)
+            parent, rank = reference_taxonomy.at[pred_tID, 1], reference_taxonomy.at[pred_tID, 2]
             pred_taxa[rank] = pred_tID
 
             while parent != 1:
                 pred_tID = parent
-                parent, rank = (
-                    reference_taxonomy.at[parent, 1],
-                    reference_taxonomy.at[parent, 2],
-                )
+                parent, rank = reference_taxonomy.at[parent, 1], reference_taxonomy.at[parent, 2]
                 pred_taxa[rank] = pred_tID
 
         evaluation_dict["genome"].append(genome)
-        evaluation_dict["read"].append(read_name)
+        evaluation_dict["read"].append(read_line_cols[0])
 
         seen = False
         miss = False
 
-        for idx, taxon in enumerate(taxa_order):
-            if true_taxa[taxon] == 0:
-                if taxon != "species":
-                    evaluation_dict[taxon].append(evaluation_dict[taxa_order[idx - 1]][-1])
+        for idx, rank in enumerate(taxa_order):
+            if true_taxa[rank] == 0:
+                if rank != "species":
+                    evaluation_dict[rank].append(evaluation_dict[taxa_order[idx - 1]][-1])
                 else:
                     raise ValueError("Taxonomic ID is 0 at species level.")
-            elif taxon in pred_taxa.keys():
-                if pred_taxa[taxon] == true_taxa[taxon]:
+            elif rank in pred_taxa.keys():
+                if pred_taxa[rank] == true_taxa[rank]:
                     for i in range(idx, len(taxa_order)):
                         evaluation_dict[taxa_order[i]].append("TP")
                     break
                 else:
-                    evaluation_dict[taxon].append("FP")
+                    evaluation_dict[rank].append("FP")
                 seen = True
             elif not seen:
-                if (not miss) and (true_taxa[taxon] != reference_ranks[taxon]).all():
-                    evaluation_dict[taxon].append("TN")
+                if (not miss) and (true_taxa[rank] != reference_ranks[rank]).all():
+                    evaluation_dict[rank].append("TN")
                 else:
-                    evaluation_dict[taxon].append("FN")
+                    evaluation_dict[rank].append("FN")
                     miss = True
             else:
-                if taxon != "species":
-                    evaluation_dict[taxon].append(evaluation_dict[taxa_order[idx - 1]][-1])
+                if rank != "species":
+                    evaluation_dict[rank].append(evaluation_dict[taxa_order[idx - 1]][-1])
                 else:
                     raise ValueError("Some unkown condition or conflicting taxonomic ID.")
     return pd.DataFrame(evaluation_dict)
@@ -133,8 +128,8 @@ if __name__ == "__main__":
     )
     reference_taxonomy = reference_taxonomy.applymap(lambda x: x.strip() if isinstance(x, str) else x)
 
-    kraken_result_dir = Path(RESULTS_DIR)
-    # Note that we have KrakenII output files with filenames: "output_1000x_<GENOME_NAME>.txt".
+    clark_result_dir = Path(RESULTS_DIR)
+    # Note that we have CLARK output files with filenames: "output_1000x_<GENOME_NAME>.txt".
 
     # Make sure we use superkingdom consistently.
     reference_ranks = reference_ranks.rename(columns={"kingdom": "superkingdom"})
@@ -157,9 +152,9 @@ if __name__ == "__main__":
             evaluate_classification,
             [
                 file
-                for file in list(kraken_result_dir.iterdir())
+                for file in list(clark_result_dir.iterdir())
                 if not file.stem.startswith(".")
             ],
         )
     ]
-    pd.concat(all_evaluations[0]).to_csv(OUTPUT_DIR / "KrakenII-bacteria-eval.csv")
+    pd.concat(all_evaluations[0]).to_csv(OUTPUT_DIR / "CLARK-bacteria-eval.csv")
