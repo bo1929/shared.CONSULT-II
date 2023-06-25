@@ -5,6 +5,8 @@ import pandas as pd
 from pathlib import Path
 from collections import defaultdict
 
+TVTH = 0.00
+
 parser = argparse.ArgumentParser(description="Evaulates performance of CONSULT-II.")
 parser.add_argument(
     "--results-dir",
@@ -80,7 +82,7 @@ def evaluate_classification(result_file):
         pred_taxa = {}
         rank = None
 
-        if pred_vote > 0:
+        if pred_vote > TVTH:
             evaluation_dict["vote"].append(pred_vote)
             evaluation_dict["voteNormalized"].append(pred_vote / max_vote)
 

@@ -320,6 +320,3 @@ ggsave("votesnorm.png",width=8.8,height=5.5)
     stat_ecdf(colour="red", size=0.6, alpha=0.6) +
     theme_classic() +
     labs(title=paste0("adj=",adj))
-
-
-
