@@ -163,4 +163,4 @@ if __name__ == "__main__":
             ],
         )
     ]
-    pd.concat(all_evaluations[0]).to_csv(OUTPUT_DIR / "Kraken2-bacteria-eval.csv")
+    pd.concat(all_evaluations[0]).to_csv(OUTPUT_DIR / "Kraken2-eval.csv")

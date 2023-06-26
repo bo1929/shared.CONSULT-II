@@ -5,7 +5,7 @@ import pandas as pd
 from pathlib import Path
 from collections import defaultdict
 
-TVTH = 0.00
+TVTH = 0.03
 
 parser = argparse.ArgumentParser(description="Evaulates performance of CONSULT-II.")
 parser.add_argument(
@@ -36,7 +36,7 @@ parser.add_argument(
 )
 args = parser.parse_args()
 
-NUM_THREADS = 12
+NUM_THREADS = 128
 
 RESULTS_DIR = Path(args.results_dir)
 QUERY_RANKS_PATH =  Path(args.query_ranks_path)
@@ -174,4 +174,4 @@ if __name__ == "__main__":
             ],
         )
     ]
-    pd.concat(all_evaluations[0]).to_csv(OUTPUT_DIR / "CONSULTII-bacteria-eval.csv")
+    pd.concat(all_evaluations[0]).to_csv(OUTPUT_DIR / "CONSULTII-eval.csv")
