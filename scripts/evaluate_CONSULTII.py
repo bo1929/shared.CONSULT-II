@@ -36,7 +36,7 @@ parser.add_argument(
 )
 args = parser.parse_args()
 
-NUM_THREADS = 128
+NUM_THREADS = 12
 
 RESULTS_DIR = Path(args.results_dir)
 QUERY_RANKS_PATH =  Path(args.query_ranks_path)
