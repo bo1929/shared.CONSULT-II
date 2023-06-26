@@ -1,0 +1,536 @@
+tool	rank	metric	sample	value
+profile-all_ranks-S001-postp.profile	superkingdom	Bray-Curtis distance	1	0.03223426407595162
+profile-all_ranks-S001-postp.profile	phylum	Bray-Curtis distance	1	0.19571817345622486
+profile-all_ranks-S001-postp.profile	class	Bray-Curtis distance	1	0.0945377780111341
+profile-all_ranks-S001-postp.profile	order	Bray-Curtis distance	1	0.35465021967510013
+profile-all_ranks-S001-postp.profile	family	Bray-Curtis distance	1	0.189840337281353
+profile-all_ranks-S001-postp.profile	genus	Bray-Curtis distance	1	0.32171245116664043
+profile-all_ranks-S001-postp.profile	species	Bray-Curtis distance	1	0.8409580179383104
+profile-all_ranks-S001-postp.profile	strain	Bray-Curtis distance	1	1.0
+profile-all_ranks-S001-postp.profile	superkingdom	Shannon diversity	1	0.17087992928308296
+profile-all_ranks-S001-postp.profile	superkingdom	Shannon equitability	1	0.24652762656416055
+profile-all_ranks-S001-postp.profile	phylum	Shannon diversity	1	1.5023113398016164
+profile-all_ranks-S001-postp.profile	phylum	Shannon equitability	1	0.41006853027537465
+profile-all_ranks-S001-postp.profile	class	Shannon diversity	1	2.217284676715295
+profile-all_ranks-S001-postp.profile	class	Shannon equitability	1	0.5031599592126985
+profile-all_ranks-S001-postp.profile	order	Shannon diversity	1	3.144228971481581
+profile-all_ranks-S001-postp.profile	order	Shannon equitability	1	0.602301658514706
+profile-all_ranks-S001-postp.profile	family	Shannon diversity	1	3.967546760782565
+profile-all_ranks-S001-postp.profile	family	Shannon equitability	1	0.6589489079478813
+profile-all_ranks-S001-postp.profile	genus	Shannon diversity	1	5.125899391869916
+profile-all_ranks-S001-postp.profile	genus	Shannon equitability	1	0.6721966408369081
+profile-all_ranks-S001-postp.profile	species	Shannon diversity	1	6.533511440918546
+profile-all_ranks-S001-postp.profile	species	Shannon equitability	1	0.7193781105737662
+profile-all_ranks-S001-postp.profile	strain	Shannon diversity	1	0.0012398416242643535
+profile-all_ranks-S001-postp.profile	strain	Shannon equitability	1	0.0004989489743488475
+profile-all_ranks-S001-postp.profile	superkingdom	True positives	1	2.0
+profile-all_ranks-S001-postp.profile	superkingdom	False negatives	1	0.0
+profile-all_ranks-S001-postp.profile	superkingdom	False positives	1	0.0
+profile-all_ranks-S001-postp.profile	superkingdom	Completeness	1	1.0
+profile-all_ranks-S001-postp.profile	superkingdom	Purity	1	1.0
+profile-all_ranks-S001-postp.profile	superkingdom	F1 score	1	1.0
+profile-all_ranks-S001-postp.profile	superkingdom	Jaccard index	1	1.0
+profile-all_ranks-S001-postp.profile	phylum	True positives	1	12.0
+profile-all_ranks-S001-postp.profile	phylum	False negatives	1	0.0
+profile-all_ranks-S001-postp.profile	phylum	False positives	1	27.0
+profile-all_ranks-S001-postp.profile	phylum	Completeness	1	1.0
+profile-all_ranks-S001-postp.profile	phylum	Purity	1	0.3076923076923077
+profile-all_ranks-S001-postp.profile	phylum	F1 score	1	0.47058823529411764
+profile-all_ranks-S001-postp.profile	phylum	Jaccard index	1	0.3076923076923077
+profile-all_ranks-S001-postp.profile	class	True positives	1	21.0
+profile-all_ranks-S001-postp.profile	class	False negatives	1	0.0
+profile-all_ranks-S001-postp.profile	class	False positives	1	61.0
+profile-all_ranks-S001-postp.profile	class	Completeness	1	1.0
+profile-all_ranks-S001-postp.profile	class	Purity	1	0.25609756097560976
+profile-all_ranks-S001-postp.profile	class	F1 score	1	0.4077669902912621
+profile-all_ranks-S001-postp.profile	class	Jaccard index	1	0.25609756097560976
+profile-all_ranks-S001-postp.profile	order	True positives	1	40.0
+profile-all_ranks-S001-postp.profile	order	False negatives	1	0.0
+profile-all_ranks-S001-postp.profile	order	False positives	1	145.0
+profile-all_ranks-S001-postp.profile	order	Completeness	1	1.0
+profile-all_ranks-S001-postp.profile	order	Purity	1	0.21621621621621623
+profile-all_ranks-S001-postp.profile	order	F1 score	1	0.35555555555555557
+profile-all_ranks-S001-postp.profile	order	Jaccard index	1	0.21621621621621623
+profile-all_ranks-S001-postp.profile	family	True positives	1	84.0
+profile-all_ranks-S001-postp.profile	family	False negatives	1	4.0
+profile-all_ranks-S001-postp.profile	family	False positives	1	328.0
+profile-all_ranks-S001-postp.profile	family	Completeness	1	0.9545454545454546
+profile-all_ranks-S001-postp.profile	family	Purity	1	0.20388349514563106
+profile-all_ranks-S001-postp.profile	family	F1 score	1	0.336
+profile-all_ranks-S001-postp.profile	family	Jaccard index	1	0.20192307692307693
+profile-all_ranks-S001-postp.profile	genus	True positives	1	175.0
+profile-all_ranks-S001-postp.profile	genus	False negatives	1	19.0
+profile-all_ranks-S001-postp.profile	genus	False positives	1	1875.0
+profile-all_ranks-S001-postp.profile	genus	Completeness	1	0.9020618556701031
+profile-all_ranks-S001-postp.profile	genus	Purity	1	0.08536585365853659
+profile-all_ranks-S001-postp.profile	genus	F1 score	1	0.1559714795008913
+profile-all_ranks-S001-postp.profile	genus	Jaccard index	1	0.0845819236346061
+profile-all_ranks-S001-postp.profile	species	True positives	1	56.0
+profile-all_ranks-S001-postp.profile	species	False negatives	1	185.0
+profile-all_ranks-S001-postp.profile	species	False positives	1	8741.0
+profile-all_ranks-S001-postp.profile	species	Completeness	1	0.23236514522821577
+profile-all_ranks-S001-postp.profile	species	Purity	1	0.006365806524951688
+profile-all_ranks-S001-postp.profile	species	F1 score	1	0.012392122150918344
+profile-all_ranks-S001-postp.profile	species	Jaccard index	1	0.006234691605433089
+profile-all_ranks-S001-postp.profile	strain	True positives	1	0.0
+profile-all_ranks-S001-postp.profile	strain	False negatives	1	596.0
+profile-all_ranks-S001-postp.profile	strain	False positives	1	12.0
+profile-all_ranks-S001-postp.profile	strain	Completeness	1	0.0
+profile-all_ranks-S001-postp.profile	strain	Purity	1	0.0
+profile-all_ranks-S001-postp.profile	strain	Jaccard index	1	0.0
+profile-all_ranks-S001-postp.profile	superkingdom	L1 norm error	1	0.06446852815190002
+profile-all_ranks-S001-postp.profile	phylum	L1 norm error	1	0.391439444481423
+profile-all_ranks-S001-postp.profile	class	L1 norm error	1	0.18906957549562797
+profile-all_ranks-S001-postp.profile	order	L1 norm error	1	0.7091876535389704
+profile-all_ranks-S001-postp.profile	family	L1 norm error	1	0.3791877121626881
+profile-all_ranks-S001-postp.profile	genus	L1 norm error	1	0.6321760017007666
+profile-all_ranks-S001-postp.profile	species	L1 norm error	1	1.2918656586106771
+profile-all_ranks-S001-postp.profile	strain	L1 norm error	1	1.0001201466942662
+profile-all_ranks-S001-postp.profile	na	Weighted UniFrac error	1	0.03459442484065158
+profile-all_ranks-S001-postp.profile	na	Unweighted UniFrac error	1	11.601324921621517
+profile-all_ranks-S001-postp.profile	na	Weighted UniFrac (CAMI)	1	4.774513733613124
+profile-all_ranks-S001-postp.profile	na	Unweighted UniFrac (CAMI)	1	63912.57474483445
+profile-all_ranks-S001-postp.profile	superkingdom	Sum of abundances	1	0.9999999999999
+profile-all_ranks-S001-postp.profile	phylum	Sum of abundances	1	1.0000158266803671
+profile-all_ranks-S001-postp.profile	class	Sum of abundances	1	0.9999377392933697
+profile-all_ranks-S001-postp.profile	order	Sum of abundances	1	0.999681980145582
+profile-all_ranks-S001-postp.profile	family	Sum of abundances	1	0.9974022789496816
+profile-all_ranks-S001-postp.profile	genus	Sum of abundances	1	0.9975943013093791
+profile-all_ranks-S001-postp.profile	species	Sum of abundances	1	0.992263294592771
+profile-all_ranks-S001-postp.profile	strain	Sum of abundances	1	0.00011114669426599999
+profile-all_ranks-S001-postp.profile	superkingdom	Taxon counts	1	2.0
+profile-all_ranks-S001-postp.profile	phylum	Taxon counts	1	39.0
+profile-all_ranks-S001-postp.profile	class	Taxon counts	1	82.0
+profile-all_ranks-S001-postp.profile	order	Taxon counts	1	185.0
+profile-all_ranks-S001-postp.profile	family	Taxon counts	1	412.0
+profile-all_ranks-S001-postp.profile	genus	Taxon counts	1	2050.0
+profile-all_ranks-S001-postp.profile	species	Taxon counts	1	8797.0
+profile-all_ranks-S001-postp.profile	strain	Taxon counts	1	12.0
+profile-all_ranks-S002-postp.profile	superkingdom	Bray-Curtis distance	2	0.030594359550096928
+profile-all_ranks-S002-postp.profile	phylum	Bray-Curtis distance	2	0.21365700622975872
+profile-all_ranks-S002-postp.profile	class	Bray-Curtis distance	2	0.09106989995541336
+profile-all_ranks-S002-postp.profile	order	Bray-Curtis distance	2	0.3455741320379445
+profile-all_ranks-S002-postp.profile	family	Bray-Curtis distance	2	0.18574465797099218
+profile-all_ranks-S002-postp.profile	genus	Bray-Curtis distance	2	0.3397884347725287
+profile-all_ranks-S002-postp.profile	species	Bray-Curtis distance	2	0.8320511335106209
+profile-all_ranks-S002-postp.profile	strain	Bray-Curtis distance	2	1.0
+profile-all_ranks-S002-postp.profile	superkingdom	Shannon diversity	2	0.16335445499704385
+profile-all_ranks-S002-postp.profile	superkingdom	Shannon equitability	2	0.2356706621313545
+profile-all_ranks-S002-postp.profile	phylum	Shannon diversity	2	1.4981867843943857
+profile-all_ranks-S002-postp.profile	phylum	Shannon equitability	2	0.40894269814652595
+profile-all_ranks-S002-postp.profile	class	Shannon diversity	2	2.2357729307488254
+profile-all_ranks-S002-postp.profile	class	Shannon equitability	2	0.5073554282217596
+profile-all_ranks-S002-postp.profile	order	Shannon diversity	2	3.169201113787461
+profile-all_ranks-S002-postp.profile	order	Shannon equitability	2	0.6070852677441602
+profile-all_ranks-S002-postp.profile	family	Shannon diversity	2	3.9693064047348936
+profile-all_ranks-S002-postp.profile	family	Shannon equitability	2	0.6592411579276989
+profile-all_ranks-S002-postp.profile	genus	Shannon diversity	2	5.174497231053786
+profile-all_ranks-S002-postp.profile	genus	Shannon equitability	2	0.6785696305805505
+profile-all_ranks-S002-postp.profile	species	Shannon diversity	2	6.602267018725956
+profile-all_ranks-S002-postp.profile	species	Shannon equitability	2	0.7268030868891496
+profile-all_ranks-S002-postp.profile	strain	Shannon diversity	2	0.0012508829273410996
+profile-all_ranks-S002-postp.profile	strain	Shannon equitability	2	0.0005033923215778825
+profile-all_ranks-S002-postp.profile	superkingdom	True positives	2	2.0
+profile-all_ranks-S002-postp.profile	superkingdom	False negatives	2	0.0
+profile-all_ranks-S002-postp.profile	superkingdom	False positives	2	0.0
+profile-all_ranks-S002-postp.profile	superkingdom	Completeness	2	1.0
+profile-all_ranks-S002-postp.profile	superkingdom	Purity	2	1.0
+profile-all_ranks-S002-postp.profile	superkingdom	F1 score	2	1.0
+profile-all_ranks-S002-postp.profile	superkingdom	Jaccard index	2	1.0
+profile-all_ranks-S002-postp.profile	phylum	True positives	2	12.0
+profile-all_ranks-S002-postp.profile	phylum	False negatives	2	0.0
+profile-all_ranks-S002-postp.profile	phylum	False positives	2	27.0
+profile-all_ranks-S002-postp.profile	phylum	Completeness	2	1.0
+profile-all_ranks-S002-postp.profile	phylum	Purity	2	0.3076923076923077
+profile-all_ranks-S002-postp.profile	phylum	F1 score	2	0.47058823529411764
+profile-all_ranks-S002-postp.profile	phylum	Jaccard index	2	0.3076923076923077
+profile-all_ranks-S002-postp.profile	class	True positives	2	21.0
+profile-all_ranks-S002-postp.profile	class	False negatives	2	0.0
+profile-all_ranks-S002-postp.profile	class	False positives	2	61.0
+profile-all_ranks-S002-postp.profile	class	Completeness	2	1.0
+profile-all_ranks-S002-postp.profile	class	Purity	2	0.25609756097560976
+profile-all_ranks-S002-postp.profile	class	F1 score	2	0.4077669902912621
+profile-all_ranks-S002-postp.profile	class	Jaccard index	2	0.25609756097560976
+profile-all_ranks-S002-postp.profile	order	True positives	2	40.0
+profile-all_ranks-S002-postp.profile	order	False negatives	2	0.0
+profile-all_ranks-S002-postp.profile	order	False positives	2	145.0
+profile-all_ranks-S002-postp.profile	order	Completeness	2	1.0
+profile-all_ranks-S002-postp.profile	order	Purity	2	0.21621621621621623
+profile-all_ranks-S002-postp.profile	order	F1 score	2	0.35555555555555557
+profile-all_ranks-S002-postp.profile	order	Jaccard index	2	0.21621621621621623
+profile-all_ranks-S002-postp.profile	family	True positives	2	84.0
+profile-all_ranks-S002-postp.profile	family	False negatives	2	4.0
+profile-all_ranks-S002-postp.profile	family	False positives	2	328.0
+profile-all_ranks-S002-postp.profile	family	Completeness	2	0.9545454545454546
+profile-all_ranks-S002-postp.profile	family	Purity	2	0.20388349514563106
+profile-all_ranks-S002-postp.profile	family	F1 score	2	0.336
+profile-all_ranks-S002-postp.profile	family	Jaccard index	2	0.20192307692307693
+profile-all_ranks-S002-postp.profile	genus	True positives	2	175.0
+profile-all_ranks-S002-postp.profile	genus	False negatives	2	19.0
+profile-all_ranks-S002-postp.profile	genus	False positives	2	1875.0
+profile-all_ranks-S002-postp.profile	genus	Completeness	2	0.9020618556701031
+profile-all_ranks-S002-postp.profile	genus	Purity	2	0.08536585365853659
+profile-all_ranks-S002-postp.profile	genus	F1 score	2	0.1559714795008913
+profile-all_ranks-S002-postp.profile	genus	Jaccard index	2	0.0845819236346061
+profile-all_ranks-S002-postp.profile	species	True positives	2	56.0
+profile-all_ranks-S002-postp.profile	species	False negatives	2	185.0
+profile-all_ranks-S002-postp.profile	species	False positives	2	8757.0
+profile-all_ranks-S002-postp.profile	species	Completeness	2	0.23236514522821577
+profile-all_ranks-S002-postp.profile	species	Purity	2	0.006354249404289118
+profile-all_ranks-S002-postp.profile	species	F1 score	2	0.012370223105809586
+profile-all_ranks-S002-postp.profile	species	Jaccard index	2	0.006223605245610136
+profile-all_ranks-S002-postp.profile	strain	True positives	2	0.0
+profile-all_ranks-S002-postp.profile	strain	False negatives	2	596.0
+profile-all_ranks-S002-postp.profile	strain	False positives	2	12.0
+profile-all_ranks-S002-postp.profile	strain	Completeness	2	0.0
+profile-all_ranks-S002-postp.profile	strain	Purity	2	0.0
+profile-all_ranks-S002-postp.profile	strain	Jaccard index	2	0.0
+profile-all_ranks-S002-postp.profile	superkingdom	L1 norm error	2	0.061188719100199976
+profile-all_ranks-S002-postp.profile	phylum	L1 norm error	2	0.42731730384673305
+profile-all_ranks-S002-postp.profile	class	L1 norm error	2	0.18213440318040802
+profile-all_ranks-S002-postp.profile	order	L1 norm error	2	0.6910310155136691
+profile-all_ranks-S002-postp.profile	family	L1 norm error	2	0.37092544778138775
+profile-all_ranks-S002-postp.profile	genus	L1 norm error	2	0.667001969102869
+profile-all_ranks-S002-postp.profile	species	L1 norm error	2	1.2913247776535581
+profile-all_ranks-S002-postp.profile	strain	L1 norm error	2	1.000100172068848
+profile-all_ranks-S002-postp.profile	na	Weighted UniFrac error	2	0.03505973930591432
+profile-all_ranks-S002-postp.profile	na	Unweighted UniFrac error	2	11.300177699195444
+profile-all_ranks-S002-postp.profile	na	Weighted UniFrac (CAMI)	2	4.790844446200186
+profile-all_ranks-S002-postp.profile	na	Unweighted UniFrac (CAMI)	2	63465.5632310535
+profile-all_ranks-S002-postp.profile	superkingdom	Sum of abundances	2	1.0000000000002
+profile-all_ranks-S002-postp.profile	phylum	Sum of abundances	2	1.0000154050048433
+profile-all_ranks-S002-postp.profile	class	Sum of abundances	2	0.999941740788984
+profile-all_ranks-S002-postp.profile	order	Sum of abundances	2	0.9996597137185627
+profile-all_ranks-S002-postp.profile	family	Sum of abundances	2	0.9969652832975342
+profile-all_ranks-S002-postp.profile	genus	Sum of abundances	2	0.9975389704282805
+profile-all_ranks-S002-postp.profile	species	Sum of abundances	2	0.9924546677728354
+profile-all_ranks-S002-postp.profile	strain	Sum of abundances	2	0.000112172068848
+profile-all_ranks-S002-postp.profile	superkingdom	Taxon counts	2	2.0
+profile-all_ranks-S002-postp.profile	phylum	Taxon counts	2	39.0
+profile-all_ranks-S002-postp.profile	class	Taxon counts	2	82.0
+profile-all_ranks-S002-postp.profile	order	Taxon counts	2	185.0
+profile-all_ranks-S002-postp.profile	family	Taxon counts	2	412.0
+profile-all_ranks-S002-postp.profile	genus	Taxon counts	2	2050.0
+profile-all_ranks-S002-postp.profile	species	Taxon counts	2	8813.0
+profile-all_ranks-S002-postp.profile	strain	Taxon counts	2	12.0
+profile-all_ranks-S003-postp.profile	superkingdom	Bray-Curtis distance	3	0.04321679561114351
+profile-all_ranks-S003-postp.profile	phylum	Bray-Curtis distance	3	0.20001666270973975
+profile-all_ranks-S003-postp.profile	class	Bray-Curtis distance	3	0.09929120106698043
+profile-all_ranks-S003-postp.profile	order	Bray-Curtis distance	3	0.3509502558442998
+profile-all_ranks-S003-postp.profile	family	Bray-Curtis distance	3	0.18838075600087031
+profile-all_ranks-S003-postp.profile	genus	Bray-Curtis distance	3	0.34484331043856703
+profile-all_ranks-S003-postp.profile	species	Bray-Curtis distance	3	0.8404898434811044
+profile-all_ranks-S003-postp.profile	strain	Bray-Curtis distance	3	1.0
+profile-all_ranks-S003-postp.profile	superkingdom	Shannon diversity	3	0.2197074211211155
+profile-all_ranks-S003-postp.profile	superkingdom	Shannon equitability	3	0.31697080689793644
+profile-all_ranks-S003-postp.profile	phylum	Shannon diversity	3	1.536975106862336
+profile-all_ranks-S003-postp.profile	phylum	Shannon equitability	3	0.41953029737770803
+profile-all_ranks-S003-postp.profile	class	Shannon diversity	3	2.260876619894791
+profile-all_ranks-S003-postp.profile	class	Shannon equitability	3	0.5130521127022948
+profile-all_ranks-S003-postp.profile	order	Shannon diversity	3	3.197343130125674
+profile-all_ranks-S003-postp.profile	order	Shannon equitability	3	0.6124760911441706
+profile-all_ranks-S003-postp.profile	family	Shannon diversity	3	3.963350865528686
+profile-all_ranks-S003-postp.profile	family	Shannon equitability	3	0.6582520338435263
+profile-all_ranks-S003-postp.profile	genus	Shannon diversity	3	5.23383280913013
+profile-all_ranks-S003-postp.profile	genus	Shannon equitability	3	0.6863507384829599
+profile-all_ranks-S003-postp.profile	species	Shannon diversity	3	6.708739688270162
+profile-all_ranks-S003-postp.profile	species	Shannon equitability	3	0.7386255620340298
+profile-all_ranks-S003-postp.profile	strain	Shannon diversity	3	0.0013262883374138674
+profile-all_ranks-S003-postp.profile	strain	Shannon equitability	3	0.0005531051970697928
+profile-all_ranks-S003-postp.profile	superkingdom	True positives	3	2.0
+profile-all_ranks-S003-postp.profile	superkingdom	False negatives	3	0.0
+profile-all_ranks-S003-postp.profile	superkingdom	False positives	3	0.0
+profile-all_ranks-S003-postp.profile	superkingdom	Completeness	3	1.0
+profile-all_ranks-S003-postp.profile	superkingdom	Purity	3	1.0
+profile-all_ranks-S003-postp.profile	superkingdom	F1 score	3	1.0
+profile-all_ranks-S003-postp.profile	superkingdom	Jaccard index	3	1.0
+profile-all_ranks-S003-postp.profile	phylum	True positives	3	12.0
+profile-all_ranks-S003-postp.profile	phylum	False negatives	3	0.0
+profile-all_ranks-S003-postp.profile	phylum	False positives	3	27.0
+profile-all_ranks-S003-postp.profile	phylum	Completeness	3	1.0
+profile-all_ranks-S003-postp.profile	phylum	Purity	3	0.3076923076923077
+profile-all_ranks-S003-postp.profile	phylum	F1 score	3	0.47058823529411764
+profile-all_ranks-S003-postp.profile	phylum	Jaccard index	3	0.3076923076923077
+profile-all_ranks-S003-postp.profile	class	True positives	3	21.0
+profile-all_ranks-S003-postp.profile	class	False negatives	3	0.0
+profile-all_ranks-S003-postp.profile	class	False positives	3	61.0
+profile-all_ranks-S003-postp.profile	class	Completeness	3	1.0
+profile-all_ranks-S003-postp.profile	class	Purity	3	0.25609756097560976
+profile-all_ranks-S003-postp.profile	class	F1 score	3	0.4077669902912621
+profile-all_ranks-S003-postp.profile	class	Jaccard index	3	0.25609756097560976
+profile-all_ranks-S003-postp.profile	order	True positives	3	40.0
+profile-all_ranks-S003-postp.profile	order	False negatives	3	0.0
+profile-all_ranks-S003-postp.profile	order	False positives	3	145.0
+profile-all_ranks-S003-postp.profile	order	Completeness	3	1.0
+profile-all_ranks-S003-postp.profile	order	Purity	3	0.21621621621621623
+profile-all_ranks-S003-postp.profile	order	F1 score	3	0.35555555555555557
+profile-all_ranks-S003-postp.profile	order	Jaccard index	3	0.21621621621621623
+profile-all_ranks-S003-postp.profile	family	True positives	3	84.0
+profile-all_ranks-S003-postp.profile	family	False negatives	3	4.0
+profile-all_ranks-S003-postp.profile	family	False positives	3	328.0
+profile-all_ranks-S003-postp.profile	family	Completeness	3	0.9545454545454546
+profile-all_ranks-S003-postp.profile	family	Purity	3	0.20388349514563106
+profile-all_ranks-S003-postp.profile	family	F1 score	3	0.336
+profile-all_ranks-S003-postp.profile	family	Jaccard index	3	0.20192307692307693
+profile-all_ranks-S003-postp.profile	genus	True positives	3	175.0
+profile-all_ranks-S003-postp.profile	genus	False negatives	3	19.0
+profile-all_ranks-S003-postp.profile	genus	False positives	3	1875.0
+profile-all_ranks-S003-postp.profile	genus	Completeness	3	0.9020618556701031
+profile-all_ranks-S003-postp.profile	genus	Purity	3	0.08536585365853659
+profile-all_ranks-S003-postp.profile	genus	F1 score	3	0.1559714795008913
+profile-all_ranks-S003-postp.profile	genus	Jaccard index	3	0.0845819236346061
+profile-all_ranks-S003-postp.profile	species	True positives	3	56.0
+profile-all_ranks-S003-postp.profile	species	False negatives	3	185.0
+profile-all_ranks-S003-postp.profile	species	False positives	3	8746.0
+profile-all_ranks-S003-postp.profile	species	Completeness	3	0.23236514522821577
+profile-all_ranks-S003-postp.profile	species	Purity	3	0.006362190411270166
+profile-all_ranks-S003-postp.profile	species	F1 score	3	0.012385270374875593
+profile-all_ranks-S003-postp.profile	species	Jaccard index	3	0.0062312228774897074
+profile-all_ranks-S003-postp.profile	strain	True positives	3	0.0
+profile-all_ranks-S003-postp.profile	strain	False negatives	3	596.0
+profile-all_ranks-S003-postp.profile	strain	False positives	3	11.0
+profile-all_ranks-S003-postp.profile	strain	Completeness	3	0.0
+profile-all_ranks-S003-postp.profile	strain	Purity	3	0.0
+profile-all_ranks-S003-postp.profile	strain	Jaccard index	3	0.0
+profile-all_ranks-S003-postp.profile	superkingdom	L1 norm error	3	0.08643359122229999
+profile-all_ranks-S003-postp.profile	phylum	L1 norm error	3	0.400036463684567
+profile-all_ranks-S003-postp.profile	class	L1 norm error	3	0.19857683560685999
+profile-all_ranks-S003-postp.profile	order	L1 norm error	3	0.701783243245211
+profile-all_ranks-S003-postp.profile	family	L1 norm error	3	0.37474507666814433
+profile-all_ranks-S003-postp.profile	genus	L1 norm error	3	0.6775200232268395
+profile-all_ranks-S003-postp.profile	species	L1 norm error	3	1.3010194021857129
+profile-all_ranks-S003-postp.profile	strain	L1 norm error	3	1.0001307573232392
+profile-all_ranks-S003-postp.profile	na	Weighted UniFrac error	3	0.035787199588257074
+profile-all_ranks-S003-postp.profile	na	Unweighted UniFrac error	3	11.439944062658098
+profile-all_ranks-S003-postp.profile	na	Weighted UniFrac (CAMI)	3	4.818404517748767
+profile-all_ranks-S003-postp.profile	na	Unweighted UniFrac (CAMI)	3	63496.62864314925
+profile-all_ranks-S003-postp.profile	superkingdom	Sum of abundances	3	1.0000000000003
+profile-all_ranks-S003-postp.profile	phylum	Sum of abundances	3	1.0000156900182473
+profile-all_ranks-S003-postp.profile	class	Sum of abundances	3	0.9999429373575801
+profile-all_ranks-S003-postp.profile	order	Sum of abundances	3	0.9996638545151748
+profile-all_ranks-S003-postp.profile	family	Sum of abundances	3	0.9893009590119332
+profile-all_ranks-S003-postp.profile	genus	Sum of abundances	3	0.9975044756612459
+profile-all_ranks-S003-postp.profile	species	Sum of abundances	3	0.9901019509405201
+profile-all_ranks-S003-postp.profile	strain	Sum of abundances	3	0.00011975732324000002
+profile-all_ranks-S003-postp.profile	superkingdom	Taxon counts	3	2.0
+profile-all_ranks-S003-postp.profile	phylum	Taxon counts	3	39.0
+profile-all_ranks-S003-postp.profile	class	Taxon counts	3	82.0
+profile-all_ranks-S003-postp.profile	order	Taxon counts	3	185.0
+profile-all_ranks-S003-postp.profile	family	Taxon counts	3	412.0
+profile-all_ranks-S003-postp.profile	genus	Taxon counts	3	2050.0
+profile-all_ranks-S003-postp.profile	species	Taxon counts	3	8802.0
+profile-all_ranks-S003-postp.profile	strain	Taxon counts	3	11.0
+profile-all_ranks-S004-postp.profile	superkingdom	Bray-Curtis distance	4	0.041023900688904054
+profile-all_ranks-S004-postp.profile	phylum	Bray-Curtis distance	4	0.19744752918451386
+profile-all_ranks-S004-postp.profile	class	Bray-Curtis distance	4	0.10343391974854971
+profile-all_ranks-S004-postp.profile	order	Bray-Curtis distance	4	0.3526421341664264
+profile-all_ranks-S004-postp.profile	family	Bray-Curtis distance	4	0.1871851288088097
+profile-all_ranks-S004-postp.profile	genus	Bray-Curtis distance	4	0.355128354944509
+profile-all_ranks-S004-postp.profile	species	Bray-Curtis distance	4	0.8552575265207363
+profile-all_ranks-S004-postp.profile	strain	Bray-Curtis distance	4	1.0
+profile-all_ranks-S004-postp.profile	superkingdom	Shannon diversity	4	0.20977605656762935
+profile-all_ranks-S004-postp.profile	superkingdom	Shannon equitability	4	0.30264287650736155
+profile-all_ranks-S004-postp.profile	phylum	Shannon diversity	4	1.5243855386687044
+profile-all_ranks-S004-postp.profile	phylum	Shannon equitability	4	0.4160938687299379
+profile-all_ranks-S004-postp.profile	class	Shannon diversity	4	2.239410866986533
+profile-all_ranks-S004-postp.profile	class	Shannon equitability	4	0.5081809712240659
+profile-all_ranks-S004-postp.profile	order	Shannon diversity	4	3.196598508754507
+profile-all_ranks-S004-postp.profile	order	Shannon equitability	4	0.6123334530949422
+profile-all_ranks-S004-postp.profile	family	Shannon diversity	4	3.969693313652473
+profile-all_ranks-S004-postp.profile	family	Shannon equitability	4	0.6593054175884127
+profile-all_ranks-S004-postp.profile	genus	Shannon diversity	4	5.254950495170654
+profile-all_ranks-S004-postp.profile	genus	Shannon equitability	4	0.6891200549547587
+profile-all_ranks-S004-postp.profile	species	Shannon diversity	4	6.763641350989474
+profile-all_ranks-S004-postp.profile	species	Shannon equitability	4	0.7445864009645015
+profile-all_ranks-S004-postp.profile	strain	Shannon diversity	4	0.001288418887722149
+profile-all_ranks-S004-postp.profile	strain	Shannon equitability	4	0.0005373124099029353
+profile-all_ranks-S004-postp.profile	superkingdom	True positives	4	2.0
+profile-all_ranks-S004-postp.profile	superkingdom	False negatives	4	0.0
+profile-all_ranks-S004-postp.profile	superkingdom	False positives	4	0.0
+profile-all_ranks-S004-postp.profile	superkingdom	Completeness	4	1.0
+profile-all_ranks-S004-postp.profile	superkingdom	Purity	4	1.0
+profile-all_ranks-S004-postp.profile	superkingdom	F1 score	4	1.0
+profile-all_ranks-S004-postp.profile	superkingdom	Jaccard index	4	1.0
+profile-all_ranks-S004-postp.profile	phylum	True positives	4	12.0
+profile-all_ranks-S004-postp.profile	phylum	False negatives	4	0.0
+profile-all_ranks-S004-postp.profile	phylum	False positives	4	27.0
+profile-all_ranks-S004-postp.profile	phylum	Completeness	4	1.0
+profile-all_ranks-S004-postp.profile	phylum	Purity	4	0.3076923076923077
+profile-all_ranks-S004-postp.profile	phylum	F1 score	4	0.47058823529411764
+profile-all_ranks-S004-postp.profile	phylum	Jaccard index	4	0.3076923076923077
+profile-all_ranks-S004-postp.profile	class	True positives	4	21.0
+profile-all_ranks-S004-postp.profile	class	False negatives	4	0.0
+profile-all_ranks-S004-postp.profile	class	False positives	4	61.0
+profile-all_ranks-S004-postp.profile	class	Completeness	4	1.0
+profile-all_ranks-S004-postp.profile	class	Purity	4	0.25609756097560976
+profile-all_ranks-S004-postp.profile	class	F1 score	4	0.4077669902912621
+profile-all_ranks-S004-postp.profile	class	Jaccard index	4	0.25609756097560976
+profile-all_ranks-S004-postp.profile	order	True positives	4	40.0
+profile-all_ranks-S004-postp.profile	order	False negatives	4	0.0
+profile-all_ranks-S004-postp.profile	order	False positives	4	145.0
+profile-all_ranks-S004-postp.profile	order	Completeness	4	1.0
+profile-all_ranks-S004-postp.profile	order	Purity	4	0.21621621621621623
+profile-all_ranks-S004-postp.profile	order	F1 score	4	0.35555555555555557
+profile-all_ranks-S004-postp.profile	order	Jaccard index	4	0.21621621621621623
+profile-all_ranks-S004-postp.profile	family	True positives	4	84.0
+profile-all_ranks-S004-postp.profile	family	False negatives	4	4.0
+profile-all_ranks-S004-postp.profile	family	False positives	4	328.0
+profile-all_ranks-S004-postp.profile	family	Completeness	4	0.9545454545454546
+profile-all_ranks-S004-postp.profile	family	Purity	4	0.20388349514563106
+profile-all_ranks-S004-postp.profile	family	F1 score	4	0.336
+profile-all_ranks-S004-postp.profile	family	Jaccard index	4	0.20192307692307693
+profile-all_ranks-S004-postp.profile	genus	True positives	4	175.0
+profile-all_ranks-S004-postp.profile	genus	False negatives	4	19.0
+profile-all_ranks-S004-postp.profile	genus	False positives	4	1875.0
+profile-all_ranks-S004-postp.profile	genus	Completeness	4	0.9020618556701031
+profile-all_ranks-S004-postp.profile	genus	Purity	4	0.08536585365853659
+profile-all_ranks-S004-postp.profile	genus	F1 score	4	0.1559714795008913
+profile-all_ranks-S004-postp.profile	genus	Jaccard index	4	0.0845819236346061
+profile-all_ranks-S004-postp.profile	species	True positives	4	56.0
+profile-all_ranks-S004-postp.profile	species	False negatives	4	185.0
+profile-all_ranks-S004-postp.profile	species	False positives	4	8755.0
+profile-all_ranks-S004-postp.profile	species	Completeness	4	0.23236514522821577
+profile-all_ranks-S004-postp.profile	species	Purity	4	0.006355691748950176
+profile-all_ranks-S004-postp.profile	species	F1 score	4	0.012372956252761821
+profile-all_ranks-S004-postp.profile	species	Jaccard index	4	0.006224988883948421
+profile-all_ranks-S004-postp.profile	strain	True positives	4	0.0
+profile-all_ranks-S004-postp.profile	strain	False negatives	4	596.0
+profile-all_ranks-S004-postp.profile	strain	False positives	4	11.0
+profile-all_ranks-S004-postp.profile	strain	Completeness	4	0.0
+profile-all_ranks-S004-postp.profile	strain	Purity	4	0.0
+profile-all_ranks-S004-postp.profile	strain	Jaccard index	4	0.0
+profile-all_ranks-S004-postp.profile	superkingdom	L1 norm error	4	0.08204780137779992
+profile-all_ranks-S004-postp.profile	phylum	L1 norm error	4	0.3948986248936841
+profile-all_ranks-S004-postp.profile	class	L1 norm error	4	0.206861126853567
+profile-all_ranks-S004-postp.profile	order	L1 norm error	4	0.7051612865324359
+profile-all_ranks-S004-postp.profile	family	L1 norm error	4	0.37298828922338023
+profile-all_ranks-S004-postp.profile	genus	L1 norm error	4	0.6981482259498248
+profile-all_ranks-S004-postp.profile	species	L1 norm error	4	1.3345419869686919
+profile-all_ranks-S004-postp.profile	strain	L1 norm error	4	1.0001196753093526
+profile-all_ranks-S004-postp.profile	na	Weighted UniFrac error	4	0.03593668141106319
+profile-all_ranks-S004-postp.profile	na	Unweighted UniFrac error	4	11.559243032082357
+profile-all_ranks-S004-postp.profile	na	Weighted UniFrac (CAMI)	4	4.846407759307454
+profile-all_ranks-S004-postp.profile	na	Unweighted UniFrac (CAMI)	4	63657.68268208935
+profile-all_ranks-S004-postp.profile	superkingdom	Sum of abundances	4	0.9999999999998
+profile-all_ranks-S004-postp.profile	phylum	Sum of abundances	4	1.0000170631516179
+profile-all_ranks-S004-postp.profile	class	Sum of abundances	4	0.9999361021062648
+profile-all_ranks-S004-postp.profile	order	Sum of abundances	4	0.9996532560794598
+profile-all_ranks-S004-postp.profile	family	Sum of abundances	4	0.9926211037035165
+profile-all_ranks-S004-postp.profile	genus	Sum of abundances	4	0.9955589224252157
+profile-all_ranks-S004-postp.profile	species	Sum of abundances	4	0.9858638282398003
+profile-all_ranks-S004-postp.profile	strain	Sum of abundances	4	0.000115675309354
+profile-all_ranks-S004-postp.profile	superkingdom	Taxon counts	4	2.0
+profile-all_ranks-S004-postp.profile	phylum	Taxon counts	4	39.0
+profile-all_ranks-S004-postp.profile	class	Taxon counts	4	82.0
+profile-all_ranks-S004-postp.profile	order	Taxon counts	4	185.0
+profile-all_ranks-S004-postp.profile	family	Taxon counts	4	412.0
+profile-all_ranks-S004-postp.profile	genus	Taxon counts	4	2050.0
+profile-all_ranks-S004-postp.profile	species	Taxon counts	4	8811.0
+profile-all_ranks-S004-postp.profile	strain	Taxon counts	4	11.0
+profile-all_ranks-S005-postp.profile	superkingdom	Bray-Curtis distance	5	0.044369765864095606
+profile-all_ranks-S005-postp.profile	phylum	Bray-Curtis distance	5	0.20318546497503917
+profile-all_ranks-S005-postp.profile	class	Bray-Curtis distance	5	0.10776142095068221
+profile-all_ranks-S005-postp.profile	order	Bray-Curtis distance	5	0.3546434552897564
+profile-all_ranks-S005-postp.profile	family	Bray-Curtis distance	5	0.1884180269545494
+profile-all_ranks-S005-postp.profile	genus	Bray-Curtis distance	5	0.34037245441446845
+profile-all_ranks-S005-postp.profile	species	Bray-Curtis distance	5	0.8556718556144107
+profile-all_ranks-S005-postp.profile	strain	Bray-Curtis distance	5	1.0
+profile-all_ranks-S005-postp.profile	superkingdom	Shannon diversity	5	0.2252022496387513
+profile-all_ranks-S005-postp.profile	superkingdom	Shannon equitability	5	0.32489816875086486
+profile-all_ranks-S005-postp.profile	phylum	Shannon diversity	5	1.5277138093774745
+profile-all_ranks-S005-postp.profile	phylum	Shannon equitability	5	0.4170023482452987
+profile-all_ranks-S005-postp.profile	class	Shannon diversity	5	2.228621420695785
+profile-all_ranks-S005-postp.profile	class	Shannon equitability	5	0.5057325633075765
+profile-all_ranks-S005-postp.profile	order	Shannon diversity	5	3.1918794066751293
+profile-all_ranks-S005-postp.profile	order	Shannon equitability	5	0.6114294721715142
+profile-all_ranks-S005-postp.profile	family	Shannon diversity	5	3.95559390000804
+profile-all_ranks-S005-postp.profile	family	Shannon equitability	5	0.656963720367465
+profile-all_ranks-S005-postp.profile	genus	Shannon diversity	5	5.186732967652322
+profile-all_ranks-S005-postp.profile	genus	Shannon equitability	5	0.6801741921239836
+profile-all_ranks-S005-postp.profile	species	Shannon diversity	5	6.665278286067336
+profile-all_ranks-S005-postp.profile	species	Shannon equitability	5	0.7338496847239797
+profile-all_ranks-S005-postp.profile	strain	Shannon diversity	5	0.0012463587786159
+profile-all_ranks-S005-postp.profile	strain	Shannon equitability	5	0.0005015716701962358
+profile-all_ranks-S005-postp.profile	superkingdom	True positives	5	2.0
+profile-all_ranks-S005-postp.profile	superkingdom	False negatives	5	0.0
+profile-all_ranks-S005-postp.profile	superkingdom	False positives	5	0.0
+profile-all_ranks-S005-postp.profile	superkingdom	Completeness	5	1.0
+profile-all_ranks-S005-postp.profile	superkingdom	Purity	5	1.0
+profile-all_ranks-S005-postp.profile	superkingdom	F1 score	5	1.0
+profile-all_ranks-S005-postp.profile	superkingdom	Jaccard index	5	1.0
+profile-all_ranks-S005-postp.profile	phylum	True positives	5	12.0
+profile-all_ranks-S005-postp.profile	phylum	False negatives	5	0.0
+profile-all_ranks-S005-postp.profile	phylum	False positives	5	27.0
+profile-all_ranks-S005-postp.profile	phylum	Completeness	5	1.0
+profile-all_ranks-S005-postp.profile	phylum	Purity	5	0.3076923076923077
+profile-all_ranks-S005-postp.profile	phylum	F1 score	5	0.47058823529411764
+profile-all_ranks-S005-postp.profile	phylum	Jaccard index	5	0.3076923076923077
+profile-all_ranks-S005-postp.profile	class	True positives	5	21.0
+profile-all_ranks-S005-postp.profile	class	False negatives	5	0.0
+profile-all_ranks-S005-postp.profile	class	False positives	5	61.0
+profile-all_ranks-S005-postp.profile	class	Completeness	5	1.0
+profile-all_ranks-S005-postp.profile	class	Purity	5	0.25609756097560976
+profile-all_ranks-S005-postp.profile	class	F1 score	5	0.4077669902912621
+profile-all_ranks-S005-postp.profile	class	Jaccard index	5	0.25609756097560976
+profile-all_ranks-S005-postp.profile	order	True positives	5	40.0
+profile-all_ranks-S005-postp.profile	order	False negatives	5	0.0
+profile-all_ranks-S005-postp.profile	order	False positives	5	145.0
+profile-all_ranks-S005-postp.profile	order	Completeness	5	1.0
+profile-all_ranks-S005-postp.profile	order	Purity	5	0.21621621621621623
+profile-all_ranks-S005-postp.profile	order	F1 score	5	0.35555555555555557
+profile-all_ranks-S005-postp.profile	order	Jaccard index	5	0.21621621621621623
+profile-all_ranks-S005-postp.profile	family	True positives	5	84.0
+profile-all_ranks-S005-postp.profile	family	False negatives	5	4.0
+profile-all_ranks-S005-postp.profile	family	False positives	5	328.0
+profile-all_ranks-S005-postp.profile	family	Completeness	5	0.9545454545454546
+profile-all_ranks-S005-postp.profile	family	Purity	5	0.20388349514563106
+profile-all_ranks-S005-postp.profile	family	F1 score	5	0.336
+profile-all_ranks-S005-postp.profile	family	Jaccard index	5	0.20192307692307693
+profile-all_ranks-S005-postp.profile	genus	True positives	5	175.0
+profile-all_ranks-S005-postp.profile	genus	False negatives	5	19.0
+profile-all_ranks-S005-postp.profile	genus	False positives	5	1875.0
+profile-all_ranks-S005-postp.profile	genus	Completeness	5	0.9020618556701031
+profile-all_ranks-S005-postp.profile	genus	Purity	5	0.08536585365853659
+profile-all_ranks-S005-postp.profile	genus	F1 score	5	0.1559714795008913
+profile-all_ranks-S005-postp.profile	genus	Jaccard index	5	0.0845819236346061
+profile-all_ranks-S005-postp.profile	species	True positives	5	56.0
+profile-all_ranks-S005-postp.profile	species	False negatives	5	185.0
+profile-all_ranks-S005-postp.profile	species	False positives	5	8745.0
+profile-all_ranks-S005-postp.profile	species	Completeness	5	0.23236514522821577
+profile-all_ranks-S005-postp.profile	species	Purity	5	0.006362913305306216
+profile-all_ranks-S005-postp.profile	species	F1 score	5	0.0123866401238664
+profile-all_ranks-S005-postp.profile	species	Jaccard index	5	0.006231916314266637
+profile-all_ranks-S005-postp.profile	strain	True positives	5	0.0
+profile-all_ranks-S005-postp.profile	strain	False negatives	5	596.0
+profile-all_ranks-S005-postp.profile	strain	False positives	5	12.0
+profile-all_ranks-S005-postp.profile	strain	Completeness	5	0.0
+profile-all_ranks-S005-postp.profile	strain	Purity	5	0.0
+profile-all_ranks-S005-postp.profile	strain	Jaccard index	5	0.0
+profile-all_ranks-S005-postp.profile	superkingdom	L1 norm error	5	0.08873953172820008
+profile-all_ranks-S005-postp.profile	phylum	L1 norm error	5	0.40637390686300506
+profile-all_ranks-S005-postp.profile	class	L1 norm error	5	0.21551597711663895
+profile-all_ranks-S005-postp.profile	order	L1 norm error	5	0.7091718112215867
+profile-all_ranks-S005-postp.profile	family	L1 norm error	5	0.37591446739074913
+profile-all_ranks-S005-postp.profile	genus	L1 norm error	5	0.6679021448284044
+profile-all_ranks-S005-postp.profile	species	L1 norm error	5	1.301828170920096
+profile-all_ranks-S005-postp.profile	strain	L1 norm error	5	1.0001106697714575
+profile-all_ranks-S005-postp.profile	na	Weighted UniFrac error	5	0.03633696982585544
+profile-all_ranks-S005-postp.profile	na	Unweighted UniFrac error	5	11.397299025918704
+profile-all_ranks-S005-postp.profile	na	Weighted UniFrac (CAMI)	5	4.859335760056307
+profile-all_ranks-S005-postp.profile	na	Unweighted UniFrac (CAMI)	5	63294.706376113514
+profile-all_ranks-S005-postp.profile	superkingdom	Sum of abundances	5	1.0000000000001998
+profile-all_ranks-S005-postp.profile	phylum	Sum of abundances	5	1.0000156512100506
+profile-all_ranks-S005-postp.profile	class	Sum of abundances	5	0.9999362964531745
+profile-all_ranks-S005-postp.profile	order	Sum of abundances	5	0.999673450494831
+profile-all_ranks-S005-postp.profile	family	Sum of abundances	5	0.9951058198234226
+profile-all_ranks-S005-postp.profile	genus	Sum of abundances	5	0.9965444978353328
+profile-all_ranks-S005-postp.profile	species	Sum of abundances	5	0.9821745294900939
+profile-all_ranks-S005-postp.profile	strain	Sum of abundances	5	0.000111669771458
+profile-all_ranks-S005-postp.profile	superkingdom	Taxon counts	5	2.0
+profile-all_ranks-S005-postp.profile	phylum	Taxon counts	5	39.0
+profile-all_ranks-S005-postp.profile	class	Taxon counts	5	82.0
+profile-all_ranks-S005-postp.profile	order	Taxon counts	5	185.0
+profile-all_ranks-S005-postp.profile	family	Taxon counts	5	412.0
+profile-all_ranks-S005-postp.profile	genus	Taxon counts	5	2050.0
+profile-all_ranks-S005-postp.profile	species	Taxon counts	5	8801.0
+profile-all_ranks-S005-postp.profile	strain	Taxon counts	5	12.0
