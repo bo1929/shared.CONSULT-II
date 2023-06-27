@@ -5,8 +5,6 @@ require(dplyr)
 require(reshape2)
 require(latex2exp)
 
-theme_set(theme_cowplot(font_size = 15))
-
 eval0 <- read_csv("../results/CONSULTII-evaluation-bacteria-w4s5_th05_c00.csv")
 eval0 <- arrange(eval0, vote)
 eval0 <- melt(eval0[, 2:11], id.vars = 1:4)
@@ -21,6 +19,6 @@ ggplot(aes(x = vote, color = variable, linetype = value), data = eval0_p) +
   annotate("rect", xmin = 0.003, xmax = 0.01, ymin = 0, ymax = 1, alpha = .1) +
   annotate("rect", xmin = 0.003, xmax = 0.03, ymin = 0, ymax = 1, alpha = .1) +
   scale_color_brewer(palette = "Dark2", name = "Rank", direction=-1) +
-  theme_cowplot() +
+  theme_cowplot(font_size = 17) +
   theme(aspect.ratio = 1)
 ggsave2("../figures/total_vote_effect.pdf")

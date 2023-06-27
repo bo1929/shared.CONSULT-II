@@ -3,8 +3,6 @@ require(readr)
 require(cowplot)
 require(dplyr)
 
-theme_set(theme_minimal_vgrid(font_size = 7.5))
-
 pm <- read_tsv("../results/all_tools-profiling_evaluation-CAMI1_all-alternative_postp.tsv")
 pm <- pm %>% filter(metric == "Bray-Curtis distance" | metric == "Shannon equitability")
 pm <- pm %>%
@@ -28,7 +26,7 @@ bc_plot <- ggplot(pm %>% filter(metric == "Bray-Curtis distance"), mapping = aes
   geom_pointrange(size = 1, linewidth = 1, mapping = aes(xmin = lower, xmax = upper)) +
   facet_wrap(vars(rank), scales = "free_x") +
   xlim(0, NA) +
-  theme_minimal_vgrid() +
+  theme_minimal_vgrid(font_size = 17) +
   labs(title = "Bray-Curtis dissimilarity", color = "Tool", y = "", x = "Absolute difference to gold stantard") +
   scale_colour_brewer(palette = "Dark2") +
   theme(strip.background = element_rect(fill = "gray")) +
@@ -40,7 +38,7 @@ se_plot <- ggplot(pm %>% filter(metric == "Shannon equitability"), mapping = aes
   geom_pointrange(size = 1, linewidth = 1, mapping = aes(xmin = lower, xmax = upper)) +
   facet_wrap(vars(rank), scales = "free_x") +
   xlim(0, NA) +
-  theme_minimal_vgrid() +
+  theme_minimal_vgrid(font_size = 17) +
   labs(title = "Shannon's equitability", color = "Tool", y = "", x = "Absolute difference to gold stantard") +
   scale_colour_brewer(palette = "Dark2") +
   theme(strip.background = element_rect(fill = "gray")) +

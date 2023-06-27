@@ -2,8 +2,6 @@ require(rlang)
 require(ggplot2)
 require(cowplot)
 
-theme_set(theme_minimal_grid(font_size = 10))
-
 w <- 4
 s <- 5
 
@@ -18,7 +16,6 @@ ggplot() +
   ) +
   labs(y = "Probability of LCA update", x = "Number of genomes with that k-mer") +
   geom_function(fun = function(x, w, s) pmin(w / (pmax(x + w - s, w)) + 1 / s**2, 1), args = list(w = 4, s = 5), linewidth = 1) +
-  theme_minimal_grid() +
+  theme_minimal_grid(font_size = 18) +
   theme(aspect.ratio = 1)
-
 ggsave2("../figures/probability_LCA_update.pdf")

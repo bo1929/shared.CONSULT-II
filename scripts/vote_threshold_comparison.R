@@ -3,8 +3,6 @@ require(readr)
 require(cowplot)
 require(dplyr)
 
-theme_set(theme_cowplot(font_size = 8))
-
 scores_cc <- read_csv("../results/summary_scores_c.csv")
 scores_cc <- scores_cc %>%
   filter(Taxonomic_Rank != "superkingdom") %>%
@@ -20,7 +18,7 @@ ggplot(scores_cc, aes(x = Precision, y = Recall, color = Distance_to_closest, sh
   geom_line(aes(group = Distance_to_closest), color = "gray") +
   geom_point(size = 3, alpha = 0.8) +
   labs(shape = "Vote threshold", colour = "Distance to closest", x = "Precision", y = "Recall") +
-  theme_cowplot() +
+  theme_cowplot(font_size = 16.5) +
   scale_colour_brewer(palette = "Paired") +
   theme(aspect.ratio = 1, panel.spacing.x = unit(1.25, "lines"))
 
