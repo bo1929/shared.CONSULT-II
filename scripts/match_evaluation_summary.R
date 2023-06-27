@@ -26,9 +26,9 @@ ggplot(ms_summary, aes(color = Rank, fill = Rank)) +
   scale_y_continuous(trans = "log10", labels = scales::trans_format("log10", scales::math_format(10^.x))) +
   theme_cowplot() +
   labs(shape = "Rank", colour = "Rank", x = "Hamming distance", y = "Avg. number of matches") +
-  scale_colour_brewer(palette = "Paired") +
+  scale_colour_brewer(palette = "Dark2") +
   theme(panel.spacing.x = unit(1.15, "lines")) +
+  theme(legend.key.width = unit(2.5, "line")) +
   annotation_logticks(sides = "l") +
   theme(aspect.ratio = 1.5)
-
 ggsave2("../figures/number_of_matches.pdf")

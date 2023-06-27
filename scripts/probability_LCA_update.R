@@ -2,7 +2,7 @@ require(rlang)
 require(ggplot2)
 require(cowplot)
 
-theme_set(theme_cowplot(font_size = 10))
+theme_set(theme_minimal_grid(font_size = 10))
 
 w <- 4
 s <- 5
