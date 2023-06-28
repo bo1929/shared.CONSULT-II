@@ -21,4 +21,4 @@ ggplot(aes(x = vote, color = variable, linetype = value), data = eval0_p) +
   scale_color_brewer(palette = "Dark2", name = "Rank", direction=-1) +
   theme_cowplot(font_size = 17) +
   theme(aspect.ratio = 1)
-ggsave2("../figures/total_vote_effect.pdf")
+ggsave2("../figures/total_vote_impact.pdf")
