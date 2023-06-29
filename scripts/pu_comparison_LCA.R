@@ -17,8 +17,8 @@ ggplot(summary_scores_pu, aes(x = Distance_to_closest, y = F1, color = Method, s
   facet_wrap(vars(Taxonomic_Rank)) +
   geom_point(size = 3, alpha = 0.8) +
   geom_line(aes(linetype = Method)) +
-  labs(linetype = "LCA", shape = "LCA", colour = "LCA", x = "Distance to closest", y = "F1") +
+  labs(linetype = "LCA", shape = "LCA", colour = "LCA", x = "Distance to the closest", y = "F1") +
   theme_cowplot(font_size = 15) +
   scale_colour_brewer(palette = "Dark2") +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1), aspect.ratio = 0.8)
-ggsave2("../figures/pu_comparison_LCA.pdf")
+ggsave2("../figures/pu_comparison_LCA.pdf", width = 8, height = 5)

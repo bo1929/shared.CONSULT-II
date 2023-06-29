@@ -8,6 +8,11 @@ wINFs5 = pd.read_csv("../results/CONSULTII-summary_evaluation-bacteria-wINFs5_th
 
 def compute_metrics(df, name=""):
     scores = defaultdict(list)
+    df = df.replace("(0.0, 0.001)", "(0.00, 0.06)")
+    df = df.replace("(0.001, 0.02)", "(0.00, 0.06)")
+    df = df.replace("(0.02, 0.06)", "(0.00, 0.06)")
+    df = df.replace("(0.12, 0.16)", "(0.12, 0.22)")
+    df = df.replace("(0.16, 0.22)", "(0.12, 0.22)")
     for bin_rank, sub_df in df.groupby([0, 1]):
         values_TP = sub_df.loc[sub_df[2] == "TP"][3].values
         values_TN = sub_df.loc[sub_df[2] == "TN"][3].values

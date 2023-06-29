@@ -41,7 +41,7 @@ def compute_metrics(df, name=""):
     return pd.DataFrame(scores)
 
 scores_KrakenII = compute_metrics(r_KrakenII, "Kraken-II")
-scores_CONSULTII = compute_metrics(r_CONSULTII, "CONSULT-II")
+scores_CONSULTII = compute_metrics(r_CONSULTII, f"CONSULT-II (0.{sys.argv[2]})")
 scores_CLARK = compute_metrics(r_CLARK, "CLARK")
 scores = pd.concat((scores_CLARK, scores_CONSULTII, scores_KrakenII))
 
