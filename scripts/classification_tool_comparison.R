@@ -3,7 +3,7 @@ require(readr)
 require(cowplot)
 require(dplyr)
 
-dataset_type <- "archaea"
+dataset_type <- "bacteria"
 scores_sm <- read_csv(paste(paste("../results/summary_scores_methods", dataset_type, sep = "-"), "csv", sep = "."))
 scores_sm <- scores_sm %>%
   filter(Taxonomic_Rank != "superkingdom") %>%
@@ -31,6 +31,6 @@ ggplot(scores_sm, aes(y = Distance_to_closest, x = F1, color = Method, shape = M
   theme_minimal_vgrid(font_size = 17) +
   theme(strip.background = element_rect(fill = "gray")) +
   scale_colour_brewer(palette = "Dark2") +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1), aspect.ratio = 0.9) +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1), aspect.ratio = 1.2) +
   theme(panel.spacing.x = unit(1, "lines"))
-ggsave2(paste(paste("../figures/classification_tool_comparison", dataset_type, sep = "-"), "2.pdf", sep="-"), width=10, height = 5)
+ggsave2(paste(paste("../figures/classification_tool_comparison", dataset_type, sep = "-"), "2.pdf", sep="-"), width=10, height = 6)

@@ -22,3 +22,14 @@ ggplot(aes(x = vote, color = variable, linetype = value), data = eval0_p) +
   theme_cowplot(font_size = 17) +
   theme(aspect.ratio = 1)
 ggsave2("../figures/total_vote_impact.pdf")
+
+ggplot(aes(x = voteNormalized, color = variable), data = eval0_p) +
+  stat_ecdf(n = 1000) +
+  scale_y_continuous(name = "ECDF") +
+  facet_wrap(vars(value)) +
+  scale_x_continuous(name = "Total vote (normalized)", trans = "log10") +
+  scale_color_brewer(palette = "Dark2", name = "Rank", direction=-1) +
+  theme_cowplot(font_size = 17) +
+  theme(legend.position="none")
+  theme(aspect.ratio = 1.25)
+ggsave2("../figures/total_vote_impact.pdf")
