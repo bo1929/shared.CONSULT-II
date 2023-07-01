@@ -3,7 +3,7 @@ require(readr)
 require(cowplot)
 require(dplyr)
 
-pm <- read_tsv("../results/all_tools-profiling_evaluation-CAMI1_all-alternative_postp.tsv")
+pm <- read_tsv("../results/all_tools-profiling_evaluation-CAMI1_hc.tsv")
 pm <- pm %>% filter(metric == "Bray-Curtis distance" | metric == "Shannon equitability")
 pm <- pm %>%
   group_by(sample, metric) %>%
@@ -60,4 +60,4 @@ legend <- get_legend(
 )
 plot_grid(prow, legend, rel_widths = c(3, .45))
 
-ggsave2("../figures/profiling_tool_comparison.pdf")
+ggsave2("../figures/profiling_tool_comparison.pdf", width = 13.5, height = 5)
