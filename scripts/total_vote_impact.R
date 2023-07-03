@@ -19,7 +19,7 @@ ggplot(aes(x = vote, color = variable, linetype = value), data = eval0_p) +
   annotate("rect", xmin = 0.003, xmax = 0.01, ymin = 0, ymax = 1, alpha = .1) +
   annotate("rect", xmin = 0.003, xmax = 0.03, ymin = 0, ymax = 1, alpha = .1) +
   scale_color_brewer(palette = "Dark2", name = "Rank", direction=-1) +
-  theme_cowplot(font_size = 17) +
+  theme_cowplot(font_size = 19) +
   theme(aspect.ratio = 0.7)
 ggsave2("../figures/total_vote_impact.pdf", width = 10, height = 6)
 
