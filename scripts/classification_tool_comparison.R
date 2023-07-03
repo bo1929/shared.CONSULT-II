@@ -21,7 +21,7 @@ scores_spm$Taxonomic_Rank <- factor(
   scores_spm$Taxonomic_Rank,
   levels = c("phylum", "class", "order", "family", "genus", "species")
 )
-scales::linetype_pal()(3)
+
 ggplot(scores_spm, aes(x = Distance_to_closest, y = F1, color = Method, linetype = Method, shape = Method)) +
   facet_wrap(vars(Taxonomic_Rank), nrow = 1) +
   geom_point(alpha = 0.5) +

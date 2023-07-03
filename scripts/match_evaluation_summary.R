@@ -33,8 +33,9 @@ ggplot(ms_summary, aes(color = Rank, fill = Rank)) +
   labs(shape = "Rank", colour = "Rank", x = "Hamming distance", y = "Avg. proportion of matched kmers") +
   scale_colour_brewer(palette = "Dark2") +
   # scale_shape_manual(values=c(0, 1, 2, 15, 16, 17))+
-  theme(panel.spacing.x = unit(1.15, "lines")) +
+  theme(panel.spacing.x = unit(1.15, "lines"), panel.spacing.y = unit(1.2, "lines")) +
   theme(legend.key.width = unit(3.5, "line")) +
+  theme(legend.position = "bottom", legend.justification = "center") +
   annotation_logticks(sides = "l") +
-  theme(aspect.ratio = 1.35)
-ggsave2("../figures/number_of_matches.pdf", width = 6.5, height = 8.5)
+  theme(aspect.ratio = 1.45)
+ggsave2("../figures/number_of_matches.pdf", width = 5.75, height = 10)

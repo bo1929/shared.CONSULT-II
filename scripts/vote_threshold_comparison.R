@@ -15,21 +15,26 @@ scores_cc$Taxonomic_Rank <- factor(
 
 ggplot(scores_cc, aes(x = Precision, y = Recall, color = Distance_to_closest, shape = Method, group = Method)) +
   facet_wrap(vars(Taxonomic_Rank)) +
-  geom_line(aes(group = Distance_to_closest), color = "gray") +
-  geom_point(size = 3, alpha = 0.8) +
-  labs(shape = "Vote threshold", colour = "Distance to closest", x = "Precision", y = "Recall") +
-  theme_cowplot(font_size = 16.5) +
+  facet_wrap(vars(Taxonomic_Rank), nrow = 1) +
+  geom_path(aes(group = Distance_to_closest), color = "darkgray") +
+  geom_point(aes(group = Method), size = 2.5, alpha = 0.85) +
+  labs(shape = "Vote threshold", colour = "Distance to the closest", x = "Precision", y = "Recall") +
   scale_colour_brewer(palette = "Paired") +
-  theme(aspect.ratio = 1, panel.spacing.x = unit(1.25, "lines"))
-ggsave2("../figures/vote_threshold_comparison-2.pdf")
+  theme_cowplot(font_size = 16) +
+  theme(legend.text = element_text(size = 12.75), legend.title = element_text(size = 14)) +
+  theme(axis.text.y = element_text(size = 12.25), axis.text.x = element_text(size = 12.25)) +
+  theme(aspect.ratio = 1.2, panel.spacing.x = unit(1.15, "lines"))
+ggsave2("../figures/vote_threshold_comparison-2.pdf", , width = 15, height = 3.7)
 
-ggplot(scores_cc, aes(x = Distance_to_closest, y = F1)) +
-  facet_wrap(vars(Taxonomic_Rank)) +
-  geom_line(aes(group = Method, linetype = Method), color="#d95f02") +
-  geom_point(size = 1.75, alpha = 0.85, shape="triangle", color="#d95f02") +
-  labs(shape = "Vote threshold", linetype = "Vote threshold", x = "Distance to closest", y = "F1") +
+ggplot(scores_cc, aes(x = Distance_to_closest, y = F1, shape = Method)) +
+  facet_wrap(vars(Taxonomic_Rank), nrow = 1) +
+  geom_line(aes(group = Method, linetype = Method, color = Method)) +
+  geom_point(size = 1.75, alpha = 0.85, aes(shape = Method, color = Method)) +
+  labs(color = "Vote threshold", shape = "Vote threshold", linetype = "Vote threshold", x = "Distance to the closest", y = "F1") +
+  scale_colour_brewer(palette = "Set1") +
+  scale_linetype_manual(values = c("22", "32", "42")) +
   theme_cowplot(font_size = 17) +
-  scale_colour_brewer(palette = "Dark2") +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1), aspect.ratio = 0.9) +
-  theme(panel.spacing.x = unit(1, "lines"))
-ggsave2("../figures/vote_threshold_comparison-1.pdf")
+  theme(legend.text = element_text(size = 12.75), legend.title = element_text(size = 14)) +
+  theme(axis.text.y = element_text(size = 12.25), axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1, size = 12.25)) +
+  theme(aspect.ratio = 1.2, panel.spacing.x = unit(1.15, "lines"))
+ggsave2("../figures/vote_threshold_comparison-1.pdf", width = 12, height = 3.75)

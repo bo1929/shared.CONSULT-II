@@ -23,11 +23,11 @@ pm <- pm %>%
   summarise(lower = min(dvalue), upper = max(dvalue), p = mean(dvalue))
 
 bc_plot <- ggplot(pm %>% filter(metric == "Bray-Curtis distance"), mapping = aes(x = p, y = tool, color = tool)) +
-  geom_pointrange(size = 1, linewidth = 1, mapping = aes(xmin = lower, xmax = upper)) +
+  geom_pointrange(size = 0.7, linewidth = 1, mapping = aes(xmin = lower, xmax = upper)) +
   facet_wrap(vars(rank), scales = "free_x") +
   xlim(0, NA) +
   theme_minimal_vgrid(font_size = 17) +
-  labs(title = "Bray-Curtis dissimilarity", color = "Tool", y = "", x = "Absolute difference to gold stantard") +
+  labs(title = "Bray-Curtis dissimilarity", color = "Tool", y = "", x = "Absolute difference to gold standard") +
   scale_colour_brewer(palette = "Dark2") +
   theme(strip.background = element_rect(fill = "gray")) +
   theme(axis.text.y = element_blank(), axis.text.x = element_text(vjust = 0.5, hjust = 1, size=9)) +
@@ -35,11 +35,11 @@ bc_plot <- ggplot(pm %>% filter(metric == "Bray-Curtis distance"), mapping = aes
   theme(plot.margin = unit(c(0, 0, 0, 0), "cm"))
 
 se_plot <- ggplot(pm %>% filter(metric == "Shannon equitability"), mapping = aes(x = p, y = tool, color = tool)) +
-  geom_pointrange(size = 1, linewidth = 1, mapping = aes(xmin = lower, xmax = upper)) +
+  geom_pointrange(size =  0.7, linewidth = 1, mapping = aes(xmin = lower, xmax = upper)) +
   facet_wrap(vars(rank), scales = "free_x") +
   xlim(0, NA) +
   theme_minimal_vgrid(font_size = 17) +
-  labs(title = "Shannon's equitability", color = "Tool", y = "", x = "Absolute difference to gold stantard") +
+  labs(title = "Shannon's equitability", color = "Tool", y = "", x = "Absolute difference to gold standard") +
   scale_colour_brewer(palette = "Dark2") +
   theme(strip.background = element_rect(fill = "gray")) +
   theme(axis.text.y = element_blank(), axis.text.x = element_text(vjust = 0.5, hjust = 1, size=9)) +
@@ -60,4 +60,4 @@ legend <- get_legend(
 )
 plot_grid(prow, legend, rel_widths = c(3, .45))
 
-ggsave2("../figures/profiling_tool_comparison.pdf", width = 13.5, height = 5)
+ggsave2("../figures/profiling_tool_comparison.pdf", width = 13.5, height = 4)

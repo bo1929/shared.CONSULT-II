@@ -14,7 +14,7 @@ summary_scores_pu$Taxonomic_Rank <- factor(
 )
 
 ggplot(summary_scores_pu, aes(x = Distance_to_closest, y = F1, color = Method, shape = Method, group = Method)) +
-  facet_wrap(vars(Taxonomic_Rank)) +
+  facet_wrap(vars(Taxonomic_Rank), nrow = 2) +
   geom_point(size = 3, alpha = 0.8) +
   geom_line(aes(linetype = Method)) +
   labs(linetype = "LCA", shape = "LCA", colour = "LCA", x = "Distance to the closest", y = "F1") +

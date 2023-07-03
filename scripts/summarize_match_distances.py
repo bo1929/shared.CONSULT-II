@@ -5,11 +5,13 @@ BINS = [(0.0, 0.05), (0.05, 0.15), (0.15, 0.35)]
 
 
 def get_bin(dist):
+    def make_inclusive(bin_i):
+        return "[" + bin_i[1:]
     bin_i = (0.35, 1)
     for bin_i in BINS:
         if (dist >= bin_i[0]) and (dist < bin_i[1]):
             break
-    return bin_i
+    return make_inclusive(str(bin_i))
 
 if __name__ == "__main__":
     results = coll.defaultdict(lambda: coll.defaultdict(lambda: coll.defaultdict(int)))
