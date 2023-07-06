@@ -1,7 +1,7 @@
 import sys
 import collections as coll
 
-BINS = [(0.0, 0.05), (0.05, 0.15), (0.15, 0.35)]
+BINS = [(0.0, 0.06), (0.06, 0.22), (0.22, 0.35)]
 
 
 def get_bin(dist):
