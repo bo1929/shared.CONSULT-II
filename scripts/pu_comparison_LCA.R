@@ -19,6 +19,7 @@ ggplot(summary_scores_pu, aes(x = Distance_to_closest, y = F1, color = Method, s
   geom_line(aes(linetype = Method)) +
   labs(linetype = "LCA", shape = "LCA", colour = "LCA", x = "Distance to the closest", y = "F1") +
   theme_cowplot(font_size = 15) +
+  theme(legend.position = "bottom", legend.justification = "center", legend.text = element_text(size = 15)) +
   scale_colour_brewer(palette = "Dark2") +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1), aspect.ratio = 0.8)
-ggsave2("../figures/pu_comparison_LCA.pdf", width = 8, height = 5)
+ggsave2("../figures/pu_comparison_LCA.pdf", width = 7.5, height = 6)
