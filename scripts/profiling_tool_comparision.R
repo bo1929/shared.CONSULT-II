@@ -5,10 +5,10 @@ require(dplyr)
 
 pm <- read_tsv("../results/all_tools-profiling_evaluation-CAMI1_hc.tsv")
 pm <- pm %>% filter(metric == "Bray-Curtis distance" | metric == "Shannon equitability")
+pm <- pm %>% filter(rank != "superkingdom")  %>% filter(rank != "strain")
 pm <- pm %>%
   group_by(sample, metric) %>%
   mutate(dvalue = abs(value - value[tool == "Gold standard"]))
-pm <- pm %>% filter(rank != "superkingdom")
 pm <- pm %>% filter(tool != "Gold standard")
 pm$rank <- factor(
   pm$rank,
