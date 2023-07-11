@@ -52,6 +52,6 @@ ggplot(pm, mapping = aes(x = p, y = rank, shape = tool, color = tool)) +
   labs(shape = "Approach", color = "Approach", y = "", x = "Absolute difference to gold standard") +
   scale_colour_brewer(palette = "Set1") +
   theme(strip.background = element_rect(fill = "gray")) +
-  theme(legend.direction = "vertical", legend.position = "bottom", legend.justification = "center", legend.text = element_text(size = fs)) +
-  theme(axis.title.y =  element_text(), axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1), aspect.ratio = 1.2)
-ggsave2("../figures/profiling_normalization_comparison-from_species.pdf", width = 5, height = 10)
+  theme(legend.direction = "vertical", legend.position = "bottom", legend.justification = "center", legend.text = element_text(size = 2*fs/3)) +
+  theme(axis.title.y =  element_text(), axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1), aspect.ratio = 1.1)
+ggsave2("../figures/profiling_normalization_comparison-all_ranks_and_from_species.pdf", width = 6, height = 10)
