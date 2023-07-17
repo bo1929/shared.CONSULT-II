@@ -27,7 +27,7 @@ bc_plot <- ggplot(pm %>% filter(metric == "Bray-Curtis distance"), mapping = aes
   facet_wrap(vars(rank), scales = "free_x") +
   xlim(0, NA) +
   theme_minimal_vgrid(font_size = 17) +
-  labs(title = "Bray-Curtis dissimilarity", color = "Tool", y = "", x = "Absolute difference to gold standard") +
+  labs(color = "Tool", y = "", x = "Bray-Curtis dissimilarity to true profile") +
   scale_colour_brewer(palette = "Dark2") +
   theme(strip.background = element_rect(fill = "gray")) +
   theme(axis.text.y = element_blank(), axis.text.x = element_text(vjust = 0.5, hjust = 1, size=9)) +
@@ -39,7 +39,7 @@ se_plot <- ggplot(pm %>% filter(metric == "Shannon equitability"), mapping = aes
   facet_wrap(vars(rank), scales = "free_x") +
   xlim(0, NA) +
   theme_minimal_vgrid(font_size = 17) +
-  labs(title = "Shannon's equitability", color = "Tool", y = "", x = "Absolute difference to gold standard") +
+  labs(color = "Tool", y = "", x = "Shannon's equitability (absolute difference to gold standard)") +
   scale_colour_brewer(palette = "Dark2") +
   theme(strip.background = element_rect(fill = "gray")) +
   theme(axis.text.y = element_blank(), axis.text.x = element_text(vjust = 0.5, hjust = 1, size=9)) +
