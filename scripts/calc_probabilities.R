@@ -15,7 +15,9 @@ ggplot() +
     limits = c(1, 10**5)
   ) +
   labs(y = "Probability of LCA update", x = "Number of genomes with that k-mer") +
-  geom_function(fun = function(x, w, s) pmin(w / (pmax(x + w - s, w)) + 1 / s**2, 1), args = list(w = 4, s = 5), linewidth = 1) +
+  geom_function(fun = function(x, w, s) pmin(w / (pmax(x + w - s, w)) + 1 / s**2, 1), args = list(w = 4, s = 5), linewidth = 1, aes(color = "old soft-LCA function")) +
+  geom_function(fun = function(x, s) 1 / log2(((x - 1) / s)**2 + 2), args = list(s = 6), linewidth = 1, aes(color = "new soft-LCA function")) +
+  scale_color_discrete(name = "functions") +
   theme_minimal_grid(font_size = 15) +
   theme(aspect.ratio = 0.8)
 ggsave2("../figures/probability_LCA_update.pdf", width = 4.25, height = 3)
