@@ -39,7 +39,7 @@ ggplot(scores %>% filter(Method != "CONSULT-II 18Gb (0.03)") %>%
   theme(axis.text.y = element_text(size=12), axis.text.x = element_text(size=12), aspect.ratio = 1.25) +
   theme(panel.spacing.x = unit(1, "lines")) +
   theme(legend.position = "bottom", legend.justification = "center", legend.direction = "horizontal", legend.box = "vertical")
-ggsave2("../figures/classification_size_comparison-bacteria1.pdf", width=15, height = 4)
+ggsave2("../figures/classification_size_comparison-bacteria-1.pdf", width=15, height = 4)
 
 ggplot(scores %>% filter(Method != "CONSULT-II 18Gb (0.03)"), aes(x = Distance_to_closest, y = F1, color = Method, linetype = Method, shape = Method)) +
   facet_wrap(vars(Taxonomic_Rank), nrow = 1) +
@@ -52,4 +52,4 @@ ggplot(scores %>% filter(Method != "CONSULT-II 18Gb (0.03)"), aes(x = Distance_t
   theme(axis.text.y = element_text(size=12), axis.text.x = element_text(size=12), aspect.ratio = 1.25) +
   theme(legend.position = "bottom", legend.justification = "center", legend.direction = "vertical") +
   theme(legend.position = "bottom", legend.justification = "center", legend.direction = "horizontal", legend.box = "vertical")
-ggsave2("../figures/classification_size_comparison-bacteria2.pdf", width=15, height = 4)
+ggsave2("../figures/classification_size_comparison-bacteria-2.pdf", width=15, height = 4)
