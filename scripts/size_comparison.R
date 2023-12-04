@@ -10,13 +10,10 @@ scores$Taxonomic_Rank <- factor(
   scores$Taxonomic_Rank,
   levels = c("phylum", "class", "order", "family", "genus", "species")
 )
-scores$Method <- factor(scores$Method, levels = c("CONSULT-II (0.03)",
-                                                  "CONSULT-II h=14, b=10 (0.03)",
-                                                  "CONSULT-II h=13, b=16 (0.03)",
-                                                  "Kraken-II"))
 scores$Method[scores$Method == "CONSULT-II (0.03)"] <- "CONSULT-II 140Gb (0.03)"
 scores$Method[scores$Method == "CONSULT-II h=14, b=10 (0.03)"] <- "CONSULT-II 32Gb (0.03)"
 scores$Method[scores$Method == "CONSULT-II h=13, b=16 (0.03)"] <- "CONSULT-II 18Gb (0.03)"
+scores$Method[scores$Method == "Kraken-II"] <- "Kraken-II 44Gb"
 
 ggplot(scores %>% filter(Method != "CONSULT-II 18Gb (0.03)") %>%
          mutate(
@@ -29,7 +26,7 @@ ggplot(scores %>% filter(Method != "CONSULT-II 18Gb (0.03)") %>%
          group_by(Method, Taxonomic_Rank, Distance_to_closest) %>%
          summarise(Recall = mean(Recall), F1 = mean(F1), Precision = mean(Precision))
        , aes(x = Precision, y = Recall, color = Distance_to_closest, shape = Method)) +
-  geom_point(alpha = 0.8, size=2.5) +
+  geom_point(alpha = 0.8, size=3) +
   facet_wrap(facets = "Taxonomic_Rank", nrow=1) +
   labs(shape = "Tool", colour = "Tool", linetype = "Tool", x = "Precision", y = "Recall") +
   scale_colour_brewer(palette = "Paired") +
@@ -39,7 +36,7 @@ ggplot(scores %>% filter(Method != "CONSULT-II 18Gb (0.03)") %>%
   theme(axis.text.y = element_text(size=12), axis.text.x = element_text(size=12), aspect.ratio = 1.25) +
   theme(panel.spacing.x = unit(1, "lines")) +
   theme(legend.position = "bottom", legend.justification = "center", legend.direction = "horizontal", legend.box = "vertical")
-ggsave2("../figures/classification_size_comparison-bacteria-1.pdf", width=15, height = 4)
+ggsave2("../figures/classification_size_comparison-bacteria-1.pdf", width = 15, height = 5)
 
 ggplot(scores %>% filter(Method != "CONSULT-II 18Gb (0.03)"), aes(x = Distance_to_closest, y = F1, color = Method, linetype = Method, shape = Method)) +
   facet_wrap(vars(Taxonomic_Rank), nrow = 1) +
@@ -52,4 +49,4 @@ ggplot(scores %>% filter(Method != "CONSULT-II 18Gb (0.03)"), aes(x = Distance_t
   theme(axis.text.y = element_text(size=12), axis.text.x = element_text(size=12), aspect.ratio = 1.25) +
   theme(legend.position = "bottom", legend.justification = "center", legend.direction = "vertical") +
   theme(legend.position = "bottom", legend.justification = "center", legend.direction = "horizontal", legend.box = "vertical")
-ggsave2("../figures/classification_size_comparison-bacteria-2.pdf", width=15, height = 4)
+ggsave2("../figures/classification_size_comparison-bacteria-2.pdf", width = 15, height = 4)
