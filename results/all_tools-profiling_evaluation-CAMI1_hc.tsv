@@ -2084,3 +2084,538 @@ CONSULT-II	family	Taxon counts	5	412.0
 CONSULT-II	genus	Taxon counts	5	2050.0
 CONSULT-II	species	Taxon counts	5	8829.0
 CONSULT-II	strain	Taxon counts	5	12.0
+CONSULT-II (rn)	superkingdom	Bray-Curtis distance	1	0.0005772085655917897
+CONSULT-II (rn)	phylum	Bray-Curtis distance	1	0.052943747126171566
+CONSULT-II (rn)	class	Bray-Curtis distance	1	0.09049715920088919
+CONSULT-II (rn)	order	Bray-Curtis distance	1	0.3508792866712842
+CONSULT-II (rn)	family	Bray-Curtis distance	1	0.1849334109358072
+CONSULT-II (rn)	genus	Bray-Curtis distance	1	0.3185163360439402
+CONSULT-II (rn)	species	Bray-Curtis distance	1	0.8313734559004033
+CONSULT-II (rn)	strain	Bray-Curtis distance	1	1.0
+CONSULT-II (rn)	superkingdom	Shannon diversity	1	0.04715173081610555
+CONSULT-II (rn)	superkingdom	Shannon equitability	1	0.06802556821772679
+CONSULT-II (rn)	phylum	Shannon diversity	1	1.2686117227058342
+CONSULT-II (rn)	phylum	Shannon equitability	1	0.34627825194262896
+CONSULT-II (rn)	class	Shannon diversity	1	2.0647880700140675
+CONSULT-II (rn)	class	Shannon equitability	1	0.4685544855837852
+CONSULT-II (rn)	order	Shannon diversity	1	3.1353344404075476
+CONSULT-II (rn)	order	Shannon equitability	1	0.6005978415006809
+CONSULT-II (rn)	family	Shannon diversity	1	3.9456879216701815
+CONSULT-II (rn)	family	Shannon equitability	1	0.6553184886912038
+CONSULT-II (rn)	genus	Shannon diversity	1	5.072421981629933
+CONSULT-II (rn)	genus	Shannon equitability	1	0.6651837572869522
+CONSULT-II (rn)	species	Shannon diversity	1	6.4281640736327175
+CONSULT-II (rn)	species	Shannon equitability	1	0.7074694380461083
+CONSULT-II (rn)	strain	Shannon diversity	1	2.0488621219848726
+CONSULT-II (rn)	strain	Shannon equitability	1	0.824522773183319
+CONSULT-II (rn)	superkingdom	True positives	1	2.0
+CONSULT-II (rn)	superkingdom	False negatives	1	0.0
+CONSULT-II (rn)	superkingdom	False positives	1	0.0
+CONSULT-II (rn)	superkingdom	Completeness	1	1.0
+CONSULT-II (rn)	superkingdom	Purity	1	1.0
+CONSULT-II (rn)	superkingdom	F1 score	1	1.0
+CONSULT-II (rn)	superkingdom	Jaccard index	1	1.0
+CONSULT-II (rn)	phylum	True positives	1	12.0
+CONSULT-II (rn)	phylum	False negatives	1	0.0
+CONSULT-II (rn)	phylum	False positives	1	27.0
+CONSULT-II (rn)	phylum	Completeness	1	1.0
+CONSULT-II (rn)	phylum	Purity	1	0.3076923076923077
+CONSULT-II (rn)	phylum	F1 score	1	0.47058823529411764
+CONSULT-II (rn)	phylum	Jaccard index	1	0.3076923076923077
+CONSULT-II (rn)	class	True positives	1	21.0
+CONSULT-II (rn)	class	False negatives	1	0.0
+CONSULT-II (rn)	class	False positives	1	61.0
+CONSULT-II (rn)	class	Completeness	1	1.0
+CONSULT-II (rn)	class	Purity	1	0.25609756097560976
+CONSULT-II (rn)	class	F1 score	1	0.4077669902912621
+CONSULT-II (rn)	class	Jaccard index	1	0.25609756097560976
+CONSULT-II (rn)	order	True positives	1	40.0
+CONSULT-II (rn)	order	False negatives	1	0.0
+CONSULT-II (rn)	order	False positives	1	145.0
+CONSULT-II (rn)	order	Completeness	1	1.0
+CONSULT-II (rn)	order	Purity	1	0.21621621621621623
+CONSULT-II (rn)	order	F1 score	1	0.35555555555555557
+CONSULT-II (rn)	order	Jaccard index	1	0.21621621621621623
+CONSULT-II (rn)	family	True positives	1	84.0
+CONSULT-II (rn)	family	False negatives	1	4.0
+CONSULT-II (rn)	family	False positives	1	328.0
+CONSULT-II (rn)	family	Completeness	1	0.9545454545454546
+CONSULT-II (rn)	family	Purity	1	0.20388349514563106
+CONSULT-II (rn)	family	F1 score	1	0.336
+CONSULT-II (rn)	family	Jaccard index	1	0.20192307692307693
+CONSULT-II (rn)	genus	True positives	1	175.0
+CONSULT-II (rn)	genus	False negatives	1	19.0
+CONSULT-II (rn)	genus	False positives	1	1875.0
+CONSULT-II (rn)	genus	Completeness	1	0.9020618556701031
+CONSULT-II (rn)	genus	Purity	1	0.08536585365853659
+CONSULT-II (rn)	genus	F1 score	1	0.1559714795008913
+CONSULT-II (rn)	genus	Jaccard index	1	0.0845819236346061
+CONSULT-II (rn)	species	True positives	1	56.0
+CONSULT-II (rn)	species	False negatives	1	185.0
+CONSULT-II (rn)	species	False positives	1	8776.0
+CONSULT-II (rn)	species	Completeness	1	0.23236514522821577
+CONSULT-II (rn)	species	Purity	1	0.006340579710144928
+CONSULT-II (rn)	species	F1 score	1	0.01234431830706492
+CONSULT-II (rn)	species	Jaccard index	1	0.0062104912942220255
+CONSULT-II (rn)	strain	True positives	1	0.0
+CONSULT-II (rn)	strain	False negatives	1	596.0
+CONSULT-II (rn)	strain	False positives	1	12.0
+CONSULT-II (rn)	strain	Completeness	1	0.0
+CONSULT-II (rn)	strain	Purity	1	0.0
+CONSULT-II (rn)	strain	Jaccard index	1	0.0
+CONSULT-II (rn)	superkingdom	L1 norm error	1	0.0011544171311835794
+CONSULT-II (rn)	phylum	L1 norm error	1	0.1058874942523431
+CONSULT-II (rn)	class	L1 norm error	1	0.18099431840177843
+CONSULT-II (rn)	order	L1 norm error	1	0.7017585733425684
+CONSULT-II (rn)	family	L1 norm error	1	0.3698668218716145
+CONSULT-II (rn)	genus	L1 norm error	1	0.6370326720878812
+CONSULT-II (rn)	species	L1 norm error	1	1.6627469118007925
+CONSULT-II (rn)	strain	L1 norm error	1	2.0000000000000004
+CONSULT-II (rn)	na	Weighted UniFrac error	1	0.07390250047495348
+CONSULT-II (rn)	na	Unweighted UniFrac error	1	7.7730108767352
+CONSULT-II (rn)	na	Weighted UniFrac (CAMI)	1	10.651756480083659
+CONSULT-II (rn)	na	Unweighted UniFrac (CAMI)	1	61179.10486641139
+CONSULT-II (rn)	class	Sum of abundances	1	1.0000000000000009
+CONSULT-II (rn)	family	Sum of abundances	1	1.0000000000000002
+CONSULT-II (rn)	phylum	Sum of abundances	1	0.9999999999999994
+CONSULT-II (rn)	genus	Sum of abundances	1	1.0000000000000004
+CONSULT-II (rn)	superkingdom	Sum of abundances	1	0.9999999999999999
+CONSULT-II (rn)	order	Sum of abundances	1	0.9999999999999996
+CONSULT-II (rn)	species	Sum of abundances	1	0.999999999999994
+CONSULT-II (rn)	strain	Sum of abundances	1	1.0
+CONSULT-II (rn)	class	Taxon counts	1	82.0
+CONSULT-II (rn)	family	Taxon counts	1	412.0
+CONSULT-II (rn)	phylum	Taxon counts	1	39.0
+CONSULT-II (rn)	genus	Taxon counts	1	2050.0
+CONSULT-II (rn)	superkingdom	Taxon counts	1	2.0
+CONSULT-II (rn)	order	Taxon counts	1	185.0
+CONSULT-II (rn)	species	Taxon counts	1	8832.0
+CONSULT-II (rn)	strain	Taxon counts	1	12.0
+CONSULT-II (rn)	superkingdom	Bray-Curtis distance	2	0.00034691603792751325
+CONSULT-II (rn)	phylum	Bray-Curtis distance	2	0.05204614472841885
+CONSULT-II (rn)	class	Bray-Curtis distance	2	0.09565544534283046
+CONSULT-II (rn)	order	Bray-Curtis distance	2	0.3418964191128563
+CONSULT-II (rn)	family	Bray-Curtis distance	2	0.1785193496860888
+CONSULT-II (rn)	genus	Bray-Curtis distance	2	0.33357843057013287
+CONSULT-II (rn)	species	Bray-Curtis distance	2	0.8180927538388899
+CONSULT-II (rn)	strain	Bray-Curtis distance	2	1.0
+CONSULT-II (rn)	superkingdom	Shannon diversity	2	0.04476848926413002
+CONSULT-II (rn)	superkingdom	Shannon equitability	2	0.06458727744945118
+CONSULT-II (rn)	phylum	Shannon diversity	2	1.2536490666747013
+CONSULT-II (rn)	phylum	Shannon equitability	2	0.3421940689872418
+CONSULT-II (rn)	class	Shannon diversity	2	2.108483112892883
+CONSULT-II (rn)	class	Shannon equitability	2	0.4784700350951234
+CONSULT-II (rn)	order	Shannon diversity	2	3.1594728581818172
+CONSULT-II (rn)	order	Shannon equitability	2	0.605221744273421
+CONSULT-II (rn)	family	Shannon diversity	2	3.9491444095474972
+CONSULT-II (rn)	family	Shannon equitability	2	0.655892558525643
+CONSULT-II (rn)	genus	Shannon diversity	2	5.117341774948981
+CONSULT-II (rn)	genus	Shannon equitability	2	0.6710744180018394
+CONSULT-II (rn)	species	Shannon diversity	2	6.498501198566855
+CONSULT-II (rn)	species	Shannon equitability	2	0.7151037250750143
+CONSULT-II (rn)	strain	Shannon diversity	2	2.057653506951963
+CONSULT-II (rn)	strain	Shannon equitability	2	0.8280606867575936
+CONSULT-II (rn)	superkingdom	True positives	2	2.0
+CONSULT-II (rn)	superkingdom	False negatives	2	0.0
+CONSULT-II (rn)	superkingdom	False positives	2	0.0
+CONSULT-II (rn)	superkingdom	Completeness	2	1.0
+CONSULT-II (rn)	superkingdom	Purity	2	1.0
+CONSULT-II (rn)	superkingdom	F1 score	2	1.0
+CONSULT-II (rn)	superkingdom	Jaccard index	2	1.0
+CONSULT-II (rn)	phylum	True positives	2	12.0
+CONSULT-II (rn)	phylum	False negatives	2	0.0
+CONSULT-II (rn)	phylum	False positives	2	27.0
+CONSULT-II (rn)	phylum	Completeness	2	1.0
+CONSULT-II (rn)	phylum	Purity	2	0.3076923076923077
+CONSULT-II (rn)	phylum	F1 score	2	0.47058823529411764
+CONSULT-II (rn)	phylum	Jaccard index	2	0.3076923076923077
+CONSULT-II (rn)	class	True positives	2	21.0
+CONSULT-II (rn)	class	False negatives	2	0.0
+CONSULT-II (rn)	class	False positives	2	61.0
+CONSULT-II (rn)	class	Completeness	2	1.0
+CONSULT-II (rn)	class	Purity	2	0.25609756097560976
+CONSULT-II (rn)	class	F1 score	2	0.4077669902912621
+CONSULT-II (rn)	class	Jaccard index	2	0.25609756097560976
+CONSULT-II (rn)	order	True positives	2	40.0
+CONSULT-II (rn)	order	False negatives	2	0.0
+CONSULT-II (rn)	order	False positives	2	145.0
+CONSULT-II (rn)	order	Completeness	2	1.0
+CONSULT-II (rn)	order	Purity	2	0.21621621621621623
+CONSULT-II (rn)	order	F1 score	2	0.35555555555555557
+CONSULT-II (rn)	order	Jaccard index	2	0.21621621621621623
+CONSULT-II (rn)	family	True positives	2	84.0
+CONSULT-II (rn)	family	False negatives	2	4.0
+CONSULT-II (rn)	family	False positives	2	328.0
+CONSULT-II (rn)	family	Completeness	2	0.9545454545454546
+CONSULT-II (rn)	family	Purity	2	0.20388349514563106
+CONSULT-II (rn)	family	F1 score	2	0.336
+CONSULT-II (rn)	family	Jaccard index	2	0.20192307692307693
+CONSULT-II (rn)	genus	True positives	2	175.0
+CONSULT-II (rn)	genus	False negatives	2	19.0
+CONSULT-II (rn)	genus	False positives	2	1875.0
+CONSULT-II (rn)	genus	Completeness	2	0.9020618556701031
+CONSULT-II (rn)	genus	Purity	2	0.08536585365853659
+CONSULT-II (rn)	genus	F1 score	2	0.1559714795008913
+CONSULT-II (rn)	genus	Jaccard index	2	0.0845819236346061
+CONSULT-II (rn)	species	True positives	2	56.0
+CONSULT-II (rn)	species	False negatives	2	185.0
+CONSULT-II (rn)	species	False positives	2	8788.0
+CONSULT-II (rn)	species	Completeness	2	0.23236514522821577
+CONSULT-II (rn)	species	Purity	2	0.006331976481230212
+CONSULT-II (rn)	species	F1 score	2	0.01232801320858558
+CONSULT-II (rn)	species	Jaccard index	2	0.006202237235574261
+CONSULT-II (rn)	strain	True positives	2	0.0
+CONSULT-II (rn)	strain	False negatives	2	596.0
+CONSULT-II (rn)	strain	False positives	2	12.0
+CONSULT-II (rn)	strain	Completeness	2	0.0
+CONSULT-II (rn)	strain	Purity	2	0.0
+CONSULT-II (rn)	strain	Jaccard index	2	0.0
+CONSULT-II (rn)	superkingdom	L1 norm error	2	0.0006938320758550265
+CONSULT-II (rn)	phylum	L1 norm error	2	0.10409228945683772
+CONSULT-II (rn)	class	L1 norm error	2	0.19131089068566087
+CONSULT-II (rn)	order	L1 norm error	2	0.6837928382257122
+CONSULT-II (rn)	family	L1 norm error	2	0.3570386993721773
+CONSULT-II (rn)	genus	L1 norm error	2	0.667156861140266
+CONSULT-II (rn)	species	L1 norm error	2	1.6361855076777772
+CONSULT-II (rn)	strain	L1 norm error	2	2.0000000000000004
+CONSULT-II (rn)	na	Weighted UniFrac error	2	0.07901849306324077
+CONSULT-II (rn)	na	Unweighted UniFrac error	2	8.010831955392351
+CONSULT-II (rn)	na	Weighted UniFrac (CAMI)	2	10.623280478863139
+CONSULT-II (rn)	na	Unweighted UniFrac (CAMI)	2	61254.97492681553
+CONSULT-II (rn)	class	Sum of abundances	2	0.9999999999999999
+CONSULT-II (rn)	family	Sum of abundances	2	1.0000000000000016
+CONSULT-II (rn)	phylum	Sum of abundances	2	0.9999999999999999
+CONSULT-II (rn)	genus	Sum of abundances	2	1.0000000000000013
+CONSULT-II (rn)	superkingdom	Sum of abundances	2	1.0
+CONSULT-II (rn)	order	Sum of abundances	2	0.9999999999999993
+CONSULT-II (rn)	species	Sum of abundances	2	1.0000000000000029
+CONSULT-II (rn)	strain	Sum of abundances	2	0.9999999999999997
+CONSULT-II (rn)	class	Taxon counts	2	82.0
+CONSULT-II (rn)	family	Taxon counts	2	412.0
+CONSULT-II (rn)	phylum	Taxon counts	2	39.0
+CONSULT-II (rn)	genus	Taxon counts	2	2050.0
+CONSULT-II (rn)	superkingdom	Taxon counts	2	2.0
+CONSULT-II (rn)	order	Taxon counts	2	185.0
+CONSULT-II (rn)	species	Taxon counts	2	8844.0
+CONSULT-II (rn)	strain	Taxon counts	2	12.0
+CONSULT-II (rn)	superkingdom	Bray-Curtis distance	3	0.0025449865532037644
+CONSULT-II (rn)	phylum	Bray-Curtis distance	3	0.05237315808236679
+CONSULT-II (rn)	class	Bray-Curtis distance	3	0.09444897718231002
+CONSULT-II (rn)	order	Bray-Curtis distance	3	0.34739832679076205
+CONSULT-II (rn)	family	Bray-Curtis distance	3	0.17966816290176527
+CONSULT-II (rn)	genus	Bray-Curtis distance	3	0.3401141585733218
+CONSULT-II (rn)	species	Bray-Curtis distance	3	0.8281775634950357
+CONSULT-II (rn)	strain	Bray-Curtis distance	3	1.0
+CONSULT-II (rn)	superkingdom	Shannon diversity	3	0.0633285908941755
+CONSULT-II (rn)	superkingdom	Shannon equitability	3	0.09136384402951296
+CONSULT-II (rn)	phylum	Shannon diversity	3	1.3036759091295143
+CONSULT-II (rn)	phylum	Shannon equitability	3	0.35584931688177734
+CONSULT-II (rn)	class	Shannon diversity	3	2.1148507657520637
+CONSULT-II (rn)	class	Shannon equitability	3	0.47991502228443295
+CONSULT-II (rn)	order	Shannon diversity	3	3.187698585911059
+CONSULT-II (rn)	order	Shannon equitability	3	0.6106286032453031
+CONSULT-II (rn)	family	Shannon diversity	3	3.969181857273943
+CONSULT-II (rn)	family	Shannon equitability	3	0.6592204724970462
+CONSULT-II (rn)	genus	Shannon diversity	3	5.1840181302435155
+CONSULT-II (rn)	genus	Shannon equitability	3	0.6798181756579733
+CONSULT-II (rn)	species	Shannon diversity	3	6.623762436566189
+CONSULT-II (rn)	species	Shannon equitability	3	0.7288785699505826
+CONSULT-II (rn)	strain	Shannon diversity	3	2.043531913326002
+CONSULT-II (rn)	strain	Shannon equitability	3	0.8223777394214571
+CONSULT-II (rn)	superkingdom	True positives	3	2.0
+CONSULT-II (rn)	superkingdom	False negatives	3	0.0
+CONSULT-II (rn)	superkingdom	False positives	3	0.0
+CONSULT-II (rn)	superkingdom	Completeness	3	1.0
+CONSULT-II (rn)	superkingdom	Purity	3	1.0
+CONSULT-II (rn)	superkingdom	F1 score	3	1.0
+CONSULT-II (rn)	superkingdom	Jaccard index	3	1.0
+CONSULT-II (rn)	phylum	True positives	3	12.0
+CONSULT-II (rn)	phylum	False negatives	3	0.0
+CONSULT-II (rn)	phylum	False positives	3	27.0
+CONSULT-II (rn)	phylum	Completeness	3	1.0
+CONSULT-II (rn)	phylum	Purity	3	0.3076923076923077
+CONSULT-II (rn)	phylum	F1 score	3	0.47058823529411764
+CONSULT-II (rn)	phylum	Jaccard index	3	0.3076923076923077
+CONSULT-II (rn)	class	True positives	3	21.0
+CONSULT-II (rn)	class	False negatives	3	0.0
+CONSULT-II (rn)	class	False positives	3	61.0
+CONSULT-II (rn)	class	Completeness	3	1.0
+CONSULT-II (rn)	class	Purity	3	0.25609756097560976
+CONSULT-II (rn)	class	F1 score	3	0.4077669902912621
+CONSULT-II (rn)	class	Jaccard index	3	0.25609756097560976
+CONSULT-II (rn)	order	True positives	3	40.0
+CONSULT-II (rn)	order	False negatives	3	0.0
+CONSULT-II (rn)	order	False positives	3	145.0
+CONSULT-II (rn)	order	Completeness	3	1.0
+CONSULT-II (rn)	order	Purity	3	0.21621621621621623
+CONSULT-II (rn)	order	F1 score	3	0.35555555555555557
+CONSULT-II (rn)	order	Jaccard index	3	0.21621621621621623
+CONSULT-II (rn)	family	True positives	3	84.0
+CONSULT-II (rn)	family	False negatives	3	4.0
+CONSULT-II (rn)	family	False positives	3	328.0
+CONSULT-II (rn)	family	Completeness	3	0.9545454545454546
+CONSULT-II (rn)	family	Purity	3	0.20388349514563106
+CONSULT-II (rn)	family	F1 score	3	0.336
+CONSULT-II (rn)	family	Jaccard index	3	0.20192307692307693
+CONSULT-II (rn)	genus	True positives	3	175.0
+CONSULT-II (rn)	genus	False negatives	3	19.0
+CONSULT-II (rn)	genus	False positives	3	1875.0
+CONSULT-II (rn)	genus	Completeness	3	0.9020618556701031
+CONSULT-II (rn)	genus	Purity	3	0.08536585365853659
+CONSULT-II (rn)	genus	F1 score	3	0.1559714795008913
+CONSULT-II (rn)	genus	Jaccard index	3	0.0845819236346061
+CONSULT-II (rn)	species	True positives	3	56.0
+CONSULT-II (rn)	species	False negatives	3	185.0
+CONSULT-II (rn)	species	False positives	3	8789.0
+CONSULT-II (rn)	species	Completeness	3	0.23236514522821577
+CONSULT-II (rn)	species	Purity	3	0.0063312605992085925
+CONSULT-II (rn)	species	F1 score	3	0.012326656394453003
+CONSULT-II (rn)	species	Jaccard index	3	0.006201550387596899
+CONSULT-II (rn)	strain	True positives	3	0.0
+CONSULT-II (rn)	strain	False negatives	3	596.0
+CONSULT-II (rn)	strain	False positives	3	12.0
+CONSULT-II (rn)	strain	Completeness	3	0.0
+CONSULT-II (rn)	strain	Purity	3	0.0
+CONSULT-II (rn)	strain	Jaccard index	3	0.0
+CONSULT-II (rn)	superkingdom	L1 norm error	3	0.005089973106407528
+CONSULT-II (rn)	phylum	L1 norm error	3	0.1047463161647336
+CONSULT-II (rn)	class	L1 norm error	3	0.18889795436462
+CONSULT-II (rn)	order	L1 norm error	3	0.6947966535815242
+CONSULT-II (rn)	family	L1 norm error	3	0.35933632580353064
+CONSULT-II (rn)	genus	L1 norm error	3	0.6802283171466431
+CONSULT-II (rn)	species	L1 norm error	3	1.6563551269900747
+CONSULT-II (rn)	strain	L1 norm error	3	2.0
+CONSULT-II (rn)	na	Weighted UniFrac error	3	0.0728846376893864
+CONSULT-II (rn)	na	Unweighted UniFrac error	3	7.928000498903464
+CONSULT-II (rn)	na	Weighted UniFrac (CAMI)	3	10.648115309343305
+CONSULT-II (rn)	na	Unweighted UniFrac (CAMI)	3	61206.03183090907
+CONSULT-II (rn)	class	Sum of abundances	3	0.9999999999999993
+CONSULT-II (rn)	family	Sum of abundances	3	1.0000000000000013
+CONSULT-II (rn)	phylum	Sum of abundances	3	1.0000000000000002
+CONSULT-II (rn)	genus	Sum of abundances	3	1.0000000000000002
+CONSULT-II (rn)	superkingdom	Sum of abundances	3	0.9999999999999999
+CONSULT-II (rn)	order	Sum of abundances	3	1.0
+CONSULT-II (rn)	species	Sum of abundances	3	1.000000000000004
+CONSULT-II (rn)	strain	Sum of abundances	3	0.9999999999999999
+CONSULT-II (rn)	class	Taxon counts	3	82.0
+CONSULT-II (rn)	family	Taxon counts	3	412.0
+CONSULT-II (rn)	phylum	Taxon counts	3	39.0
+CONSULT-II (rn)	genus	Taxon counts	3	2050.0
+CONSULT-II (rn)	superkingdom	Taxon counts	3	2.0
+CONSULT-II (rn)	order	Taxon counts	3	185.0
+CONSULT-II (rn)	species	Taxon counts	3	8845.0
+CONSULT-II (rn)	strain	Taxon counts	3	12.0
+CONSULT-II (rn)	superkingdom	Bray-Curtis distance	4	0.0019583219503858406
+CONSULT-II (rn)	phylum	Bray-Curtis distance	4	0.049648588850495175
+CONSULT-II (rn)	class	Bray-Curtis distance	4	0.09248851714873423
+CONSULT-II (rn)	order	Bray-Curtis distance	4	0.3482941198174194
+CONSULT-II (rn)	family	Bray-Curtis distance	4	0.17910940905379003
+CONSULT-II (rn)	genus	Bray-Curtis distance	4	0.3482300841850342
+CONSULT-II (rn)	species	Bray-Curtis distance	4	0.8439911700392713
+CONSULT-II (rn)	strain	Bray-Curtis distance	4	1.0
+CONSULT-II (rn)	superkingdom	Shannon diversity	4	0.06007340327615397
+CONSULT-II (rn)	superkingdom	Shannon equitability	4	0.08666760099583015
+CONSULT-II (rn)	phylum	Shannon diversity	4	1.2844565184385701
+CONSULT-II (rn)	phylum	Shannon equitability	4	0.35060322235754615
+CONSULT-II (rn)	class	Shannon diversity	4	2.0924339138083305
+CONSULT-II (rn)	class	Shannon equitability	4	0.4748280515277527
+CONSULT-II (rn)	order	Shannon diversity	4	3.1898946986963552
+CONSULT-II (rn)	order	Shannon equitability	4	0.6110492858307212
+CONSULT-II (rn)	family	Shannon diversity	4	3.971316199394365
+CONSULT-II (rn)	family	Shannon equitability	4	0.6595749541186219
+CONSULT-II (rn)	genus	Shannon diversity	4	5.216382742261595
+CONSULT-II (rn)	genus	Shannon equitability	4	0.6840623837115001
+CONSULT-II (rn)	species	Shannon diversity	4	6.71513479006329
+CONSULT-II (rn)	species	Shannon equitability	4	0.7389607650403385
+CONSULT-II (rn)	strain	Shannon diversity	4	2.074144832755243
+CONSULT-II (rn)	strain	Shannon equitability	4	0.8649855797641623
+CONSULT-II (rn)	superkingdom	True positives	4	2.0
+CONSULT-II (rn)	superkingdom	False negatives	4	0.0
+CONSULT-II (rn)	superkingdom	False positives	4	0.0
+CONSULT-II (rn)	superkingdom	Completeness	4	1.0
+CONSULT-II (rn)	superkingdom	Purity	4	1.0
+CONSULT-II (rn)	superkingdom	F1 score	4	1.0
+CONSULT-II (rn)	superkingdom	Jaccard index	4	1.0
+CONSULT-II (rn)	phylum	True positives	4	12.0
+CONSULT-II (rn)	phylum	False negatives	4	0.0
+CONSULT-II (rn)	phylum	False positives	4	27.0
+CONSULT-II (rn)	phylum	Completeness	4	1.0
+CONSULT-II (rn)	phylum	Purity	4	0.3076923076923077
+CONSULT-II (rn)	phylum	F1 score	4	0.47058823529411764
+CONSULT-II (rn)	phylum	Jaccard index	4	0.3076923076923077
+CONSULT-II (rn)	class	True positives	4	21.0
+CONSULT-II (rn)	class	False negatives	4	0.0
+CONSULT-II (rn)	class	False positives	4	61.0
+CONSULT-II (rn)	class	Completeness	4	1.0
+CONSULT-II (rn)	class	Purity	4	0.25609756097560976
+CONSULT-II (rn)	class	F1 score	4	0.4077669902912621
+CONSULT-II (rn)	class	Jaccard index	4	0.25609756097560976
+CONSULT-II (rn)	order	True positives	4	40.0
+CONSULT-II (rn)	order	False negatives	4	0.0
+CONSULT-II (rn)	order	False positives	4	145.0
+CONSULT-II (rn)	order	Completeness	4	1.0
+CONSULT-II (rn)	order	Purity	4	0.21621621621621623
+CONSULT-II (rn)	order	F1 score	4	0.35555555555555557
+CONSULT-II (rn)	order	Jaccard index	4	0.21621621621621623
+CONSULT-II (rn)	family	True positives	4	84.0
+CONSULT-II (rn)	family	False negatives	4	4.0
+CONSULT-II (rn)	family	False positives	4	328.0
+CONSULT-II (rn)	family	Completeness	4	0.9545454545454546
+CONSULT-II (rn)	family	Purity	4	0.20388349514563106
+CONSULT-II (rn)	family	F1 score	4	0.336
+CONSULT-II (rn)	family	Jaccard index	4	0.20192307692307693
+CONSULT-II (rn)	genus	True positives	4	175.0
+CONSULT-II (rn)	genus	False negatives	4	19.0
+CONSULT-II (rn)	genus	False positives	4	1875.0
+CONSULT-II (rn)	genus	Completeness	4	0.9020618556701031
+CONSULT-II (rn)	genus	Purity	4	0.08536585365853659
+CONSULT-II (rn)	genus	F1 score	4	0.1559714795008913
+CONSULT-II (rn)	genus	Jaccard index	4	0.0845819236346061
+CONSULT-II (rn)	species	True positives	4	56.0
+CONSULT-II (rn)	species	False negatives	4	185.0
+CONSULT-II (rn)	species	False positives	4	8786.0
+CONSULT-II (rn)	species	Completeness	4	0.23236514522821577
+CONSULT-II (rn)	species	Purity	4	0.006333408731056322
+CONSULT-II (rn)	species	F1 score	4	0.01233072773312782
+CONSULT-II (rn)	species	Jaccard index	4	0.006203611388058048
+CONSULT-II (rn)	strain	True positives	4	0.0
+CONSULT-II (rn)	strain	False negatives	4	596.0
+CONSULT-II (rn)	strain	False positives	4	11.0
+CONSULT-II (rn)	strain	Completeness	4	0.0
+CONSULT-II (rn)	strain	Purity	4	0.0
+CONSULT-II (rn)	strain	Jaccard index	4	0.0
+CONSULT-II (rn)	superkingdom	L1 norm error	4	0.003916643900771681
+CONSULT-II (rn)	phylum	L1 norm error	4	0.09929717770099038
+CONSULT-II (rn)	class	L1 norm error	4	0.1849770342974686
+CONSULT-II (rn)	order	L1 norm error	4	0.6965882396348387
+CONSULT-II (rn)	family	L1 norm error	4	0.35821881810758016
+CONSULT-II (rn)	genus	L1 norm error	4	0.6964601683700679
+CONSULT-II (rn)	species	L1 norm error	4	1.6879823400785445
+CONSULT-II (rn)	strain	L1 norm error	4	1.9999999999999973
+CONSULT-II (rn)	na	Weighted UniFrac error	4	0.07168656230321509
+CONSULT-II (rn)	na	Unweighted UniFrac error	4	8.109914380725526
+CONSULT-II (rn)	na	Weighted UniFrac (CAMI)	4	10.665678654980336
+CONSULT-II (rn)	na	Unweighted UniFrac (CAMI)	4	61182.02316401311
+CONSULT-II (rn)	class	Sum of abundances	4	1.0000000000000002
+CONSULT-II (rn)	family	Sum of abundances	4	0.999999999999999
+CONSULT-II (rn)	phylum	Sum of abundances	4	1.0000000000000002
+CONSULT-II (rn)	genus	Sum of abundances	4	0.9999999999999979
+CONSULT-II (rn)	superkingdom	Sum of abundances	4	1.0
+CONSULT-II (rn)	order	Sum of abundances	4	1.0
+CONSULT-II (rn)	species	Sum of abundances	4	1.000000000000002
+CONSULT-II (rn)	strain	Sum of abundances	4	1.0000000000000002
+CONSULT-II (rn)	class	Taxon counts	4	82.0
+CONSULT-II (rn)	family	Taxon counts	4	412.0
+CONSULT-II (rn)	phylum	Taxon counts	4	39.0
+CONSULT-II (rn)	genus	Taxon counts	4	2050.0
+CONSULT-II (rn)	superkingdom	Taxon counts	4	2.0
+CONSULT-II (rn)	order	Taxon counts	4	185.0
+CONSULT-II (rn)	species	Taxon counts	4	8842.0
+CONSULT-II (rn)	strain	Taxon counts	4	11.0
+CONSULT-II (rn)	superkingdom	Bray-Curtis distance	5	0.002982622004804138
+CONSULT-II (rn)	phylum	Bray-Curtis distance	5	0.051910116614874394
+CONSULT-II (rn)	class	Bray-Curtis distance	5	0.09485686472396107
+CONSULT-II (rn)	order	Bray-Curtis distance	5	0.3505416900824344
+CONSULT-II (rn)	family	Bray-Curtis distance	5	0.1815887689748622
+CONSULT-II (rn)	genus	Bray-Curtis distance	5	0.3344996693858567
+CONSULT-II (rn)	species	Bray-Curtis distance	5	0.8476878787145296
+CONSULT-II (rn)	strain	Bray-Curtis distance	5	1.0
+CONSULT-II (rn)	superkingdom	Shannon diversity	5	0.06503443419907882
+CONSULT-II (rn)	superkingdom	Shannon equitability	5	0.09382485570603064
+CONSULT-II (rn)	phylum	Shannon diversity	5	1.275281511819398
+CONSULT-II (rn)	phylum	Shannon equitability	5	0.3480988270435312
+CONSULT-II (rn)	class	Shannon diversity	5	2.06637122777891
+CONSULT-II (rn)	class	Shannon equitability	5	0.4689137455402314
+CONSULT-II (rn)	order	Shannon diversity	5	3.1856474219803035
+CONSULT-II (rn)	order	Shannon equitability	5	0.6102356867469867
+CONSULT-II (rn)	family	Shannon diversity	5	3.948946479673344
+CONSULT-II (rn)	family	Shannon equitability	5	0.6558596853971614
+CONSULT-II (rn)	genus	Shannon diversity	5	5.138785409079564
+CONSULT-II (rn)	genus	Shannon equitability	5	0.6738864784283035
+CONSULT-II (rn)	species	Shannon diversity	5	6.627292939411592
+CONSULT-II (rn)	species	Shannon equitability	5	0.7294123908442067
+CONSULT-II (rn)	strain	Shannon diversity	5	2.0599248803611845
+CONSULT-II (rn)	strain	Shannon equitability	5	0.8289747546600702
+CONSULT-II (rn)	superkingdom	True positives	5	2.0
+CONSULT-II (rn)	superkingdom	False negatives	5	0.0
+CONSULT-II (rn)	superkingdom	False positives	5	0.0
+CONSULT-II (rn)	superkingdom	Completeness	5	1.0
+CONSULT-II (rn)	superkingdom	Purity	5	1.0
+CONSULT-II (rn)	superkingdom	F1 score	5	1.0
+CONSULT-II (rn)	superkingdom	Jaccard index	5	1.0
+CONSULT-II (rn)	phylum	True positives	5	12.0
+CONSULT-II (rn)	phylum	False negatives	5	0.0
+CONSULT-II (rn)	phylum	False positives	5	27.0
+CONSULT-II (rn)	phylum	Completeness	5	1.0
+CONSULT-II (rn)	phylum	Purity	5	0.3076923076923077
+CONSULT-II (rn)	phylum	F1 score	5	0.47058823529411764
+CONSULT-II (rn)	phylum	Jaccard index	5	0.3076923076923077
+CONSULT-II (rn)	class	True positives	5	21.0
+CONSULT-II (rn)	class	False negatives	5	0.0
+CONSULT-II (rn)	class	False positives	5	61.0
+CONSULT-II (rn)	class	Completeness	5	1.0
+CONSULT-II (rn)	class	Purity	5	0.25609756097560976
+CONSULT-II (rn)	class	F1 score	5	0.4077669902912621
+CONSULT-II (rn)	class	Jaccard index	5	0.25609756097560976
+CONSULT-II (rn)	order	True positives	5	40.0
+CONSULT-II (rn)	order	False negatives	5	0.0
+CONSULT-II (rn)	order	False positives	5	145.0
+CONSULT-II (rn)	order	Completeness	5	1.0
+CONSULT-II (rn)	order	Purity	5	0.21621621621621623
+CONSULT-II (rn)	order	F1 score	5	0.35555555555555557
+CONSULT-II (rn)	order	Jaccard index	5	0.21621621621621623
+CONSULT-II (rn)	family	True positives	5	84.0
+CONSULT-II (rn)	family	False negatives	5	4.0
+CONSULT-II (rn)	family	False positives	5	328.0
+CONSULT-II (rn)	family	Completeness	5	0.9545454545454546
+CONSULT-II (rn)	family	Purity	5	0.20388349514563106
+CONSULT-II (rn)	family	F1 score	5	0.336
+CONSULT-II (rn)	family	Jaccard index	5	0.20192307692307693
+CONSULT-II (rn)	genus	True positives	5	175.0
+CONSULT-II (rn)	genus	False negatives	5	19.0
+CONSULT-II (rn)	genus	False positives	5	1875.0
+CONSULT-II (rn)	genus	Completeness	5	0.9020618556701031
+CONSULT-II (rn)	genus	Purity	5	0.08536585365853659
+CONSULT-II (rn)	genus	F1 score	5	0.1559714795008913
+CONSULT-II (rn)	genus	Jaccard index	5	0.0845819236346061
+CONSULT-II (rn)	species	True positives	5	56.0
+CONSULT-II (rn)	species	False negatives	5	185.0
+CONSULT-II (rn)	species	False positives	5	8773.0
+CONSULT-II (rn)	species	Completeness	5	0.23236514522821577
+CONSULT-II (rn)	species	Purity	5	0.006342734171480349
+CONSULT-II (rn)	species	F1 score	5	0.012348401323042999
+CONSULT-II (rn)	species	Jaccard index	5	0.006212558242733526
+CONSULT-II (rn)	strain	True positives	5	0.0
+CONSULT-II (rn)	strain	False negatives	5	596.0
+CONSULT-II (rn)	strain	False positives	5	12.0
+CONSULT-II (rn)	strain	Completeness	5	0.0
+CONSULT-II (rn)	strain	Purity	5	0.0
+CONSULT-II (rn)	strain	Jaccard index	5	0.0
+CONSULT-II (rn)	superkingdom	L1 norm error	5	0.005965244009608275
+CONSULT-II (rn)	phylum	L1 norm error	5	0.10382023322974876
+CONSULT-II (rn)	class	L1 norm error	5	0.1897137294479222
+CONSULT-II (rn)	order	L1 norm error	5	0.7010833801648692
+CONSULT-II (rn)	family	L1 norm error	5	0.36317753794972446
+CONSULT-II (rn)	genus	L1 norm error	5	0.6689993387717144
+CONSULT-II (rn)	species	L1 norm error	5	1.6953757574290542
+CONSULT-II (rn)	strain	L1 norm error	5	2.0000000000000018
+CONSULT-II (rn)	na	Weighted UniFrac error	5	0.07576293742537205
+CONSULT-II (rn)	na	Unweighted UniFrac error	5	7.67472289174037
+CONSULT-II (rn)	na	Weighted UniFrac (CAMI)	5	10.722884146812161
+CONSULT-II (rn)	na	Unweighted UniFrac (CAMI)	5	60838.21039855274
+CONSULT-II (rn)	class	Sum of abundances	5	0.9999999999999999
+CONSULT-II (rn)	family	Sum of abundances	5	1.0
+CONSULT-II (rn)	phylum	Sum of abundances	5	0.9999999999999997
+CONSULT-II (rn)	genus	Sum of abundances	5	1.0000000000000009
+CONSULT-II (rn)	superkingdom	Sum of abundances	5	1.0
+CONSULT-II (rn)	order	Sum of abundances	5	0.9999999999999993
+CONSULT-II (rn)	species	Sum of abundances	5	0.9999999999999997
+CONSULT-II (rn)	strain	Sum of abundances	5	1.0000000000000002
+CONSULT-II (rn)	class	Taxon counts	5	82.0
+CONSULT-II (rn)	family	Taxon counts	5	412.0
+CONSULT-II (rn)	phylum	Taxon counts	5	39.0
+CONSULT-II (rn)	genus	Taxon counts	5	2050.0
+CONSULT-II (rn)	superkingdom	Taxon counts	5	2.0
+CONSULT-II (rn)	order	Taxon counts	5	185.0
+CONSULT-II (rn)	species	Taxon counts	5	8829.0
+CONSULT-II (rn)	strain	Taxon counts	5	12.0

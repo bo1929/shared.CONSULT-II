@@ -30,7 +30,7 @@ ggplot(scores %>% filter(Method != "CONSULT-II 18Gb (0.03)") %>%
   facet_wrap(facets = "Taxonomic_Rank", nrow=1) +
   labs(shape = "Tool", colour = "Tool", linetype = "Tool", x = "Precision", y = "Recall") +
   scale_colour_brewer(palette = "Paired") +
-  scale_shape_manual(values = c(17, 2, 15)) +
+  scale_shape_manual(values = c(2, 17, 15)) +
   theme_cowplot(font_size = 17) +
   theme(strip.background = element_rect(fill = "gray")) +
   theme(axis.text.y = element_text(size=12), axis.text.x = element_text(size=12), aspect.ratio = 1.25) +
