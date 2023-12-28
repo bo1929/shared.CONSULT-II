@@ -4,12 +4,16 @@ require(cowplot)
 require(dplyr)
 library(tidyr)
 
-pm <- read_tsv("../results/results_profiling-strain_madness-vt1000-norm_genome_sizes-n_f1/results.tsv")
+mm <- read_tsv("../results/results_profiling-marine-vt1000-norm_genome_sizes-n_f1/results.tsv")
+sm <- read_tsv("../results/results_profiling-strain_madness-vt1000-norm_genome_sizes-n_f1/results.tsv")
+mm$Dataset <- "Marine dataset"
+sm$Dataset <- "Strain-madness dataset"
+pm <- rbind(sm, mm)
 pm <- pm %>% filter(rank != "strain")
 pm <- pm %>% group_by(sample, metric) %>% mutate(dvalue = abs(value - value[tool == "Gold standard"]))
 pm <- pm %>% filter(tool != "Gold standard")
 pm <- pm %>%
-  group_by(rank, tool, metric) %>%
+  group_by(rank, tool, metric, Dataset) %>%
   summarise(lower = min(dvalue), upper = max(dvalue), p = mean(dvalue))
 pm  <- pm %>% filter(
   tool %in% c(
@@ -99,7 +103,7 @@ plot_grid(prow, legend, rel_widths = c(3, .45))
 
 tm <- pivot_wider(
     pm,
-    id_cols = c(rank, tool),
+    id_cols = c(rank, tool, Dataset),
     names_from = metric,
     values_from = p
   )
@@ -117,12 +121,13 @@ p1 <- ggplot(tm %>% filter(rank != "na" & rank != "superkingdom"),
   theme_cowplot(font_size = 17) +
   scale_colour_manual(
     values=c("black", RColorBrewer::brewer.pal(12,"Paired"))
-  ) +
-  theme(panel.spacing.x = unit(1.5, "lines"))
+  )
 p1
 tm$`Unweighted UniFrac (CAMI) (unfiltered)` <- rep((tm %>% filter(is.na(rank)))$`Unweighted UniFrac (CAMI) (unfiltered)`, 8)
 tm$`Weighted UniFrac (CAMI) (unfiltered)` <- rep((tm %>% filter(is.na(rank)))$`Weighted UniFrac (CAMI) (unfiltered)`, 8)
-p2 <- ggplot(tm %>% filter(!rank %in% c(NA, "superkingdom")),
+p2 <- ggplot(tm %>%
+               filter(rank %in% c("genus", "phylum")) %>%
+               filter(Dataset == "Marine dataset"),
        aes(x = 2-`L1 norm error (unfiltered)`,
            y = 16-`Weighted UniFrac (CAMI) (unfiltered)`,
            color = tool,
@@ -133,13 +138,33 @@ p2 <- ggplot(tm %>% filter(!rank %in% c(NA, "superkingdom")),
   scale_colour_manual(
     values=c("black", RColorBrewer::brewer.pal(12,"Paired"))
   ) +
-  labs(x="2 - L1 norm error", y="16 - weighted UniFrac error", shape="", color="Tool") +
-  ylim(0, NA) +
+  labs(title = "Marine dataset", x="2 - L1 norm error", y="16 - weighted UniFrac error", shape="", color="Tool") +
+  xlim(1, NA) +
+  ylim(8, NA) +
   scale_shape_discrete(guide = "none") +
   theme_cowplot(font_size = 17) +
   theme(panel.spacing.x = unit(1.5, "lines"))
 p2
-plot_grid(p1+theme(legend.position = "none"), p2+theme(legend.position = "none"), ncol=2)
-ggsave2("../figures/profiling-strain_madness-tool_comparison.pdf", width = 15, height = 5)
-# plot_grid(get_legend(p1 + theme(legend.box.margin = margin(0, 0, 0, 0), legend.position = "bottom", legend.justification = "center")))
-# ggsave2("../figures/profiling-legend-CAMI2.pdf", width = 14, height = 1)
+p3 <- ggplot(tm %>%
+               filter(rank %in% c("genus", "phylum")) %>%
+               filter(Dataset == "Strain-madness dataset"),
+             aes(x = 2-`L1 norm error (unfiltered)`,
+                 y = 16-`Weighted UniFrac (CAMI) (unfiltered)`,
+                 color = tool,
+                 shape=grepl("CONS", tool))
+) +
+  facet_wrap("rank", scales = "fixed") +
+  geom_point(size=3, alpha=0.8) +
+  scale_colour_manual(
+    values=c("black", RColorBrewer::brewer.pal(12,"Paired"))
+  ) +
+  labs(title = "Strain-madness dataset", x="2 - L1 norm error", y="16 - weighted UniFrac error", shape="", color="Tool") +
+  ylim(8, NA) +
+  xlim(1, NA) +
+  scale_shape_discrete(guide = "none") +
+  theme_cowplot(font_size = 17) +
+  guides(colour = guide_legend(nrow = 2)) +
+  theme(panel.spacing.x = unit(1.5, "lines"))
+p3
+plot_grid(rel_heights=c(8, 1), plot_grid(p2+theme(legend.position = "none"), p3+theme(legend.position = "none"), ncol=2), get_legend(p3 + theme(legend.box.margin = margin(0, 0, 0, 0), legend.position = "bottom", legend.justification = "center")), nrow=2)
+ggsave2("../figures/profiling-cami2_combined-tool_comparison.pdf", width = 16, height = 4.5)

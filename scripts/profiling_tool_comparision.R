@@ -60,8 +60,8 @@ prow <- plot_grid(
 )
 legend <- get_legend(
   # create some space to the left of the legend
-  se_plot + theme(legend.box.margin = margin(0, 0, 0, 3))
+  se_plot + theme(legend.box.margin = margin(-1, 0, 0, 0), legend.position = "bottom", legend.direction = "horizontal", legend.justification = "center")
 )
-plot_grid(prow, legend, rel_widths = c(3, .5))
+plot_grid(prow, legend, rel_heights = c(3, .15), ncol = 1)
 
-ggsave2("../figures/profiling_tool_comparison.pdf", width = 14, height = 4)
+ggsave2("../figures/profiling_tool_comparison.pdf", width = 14, height = 3.5)
