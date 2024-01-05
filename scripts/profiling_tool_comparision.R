@@ -16,10 +16,11 @@ pm$rank <- factor(
   levels = c("phylum", "class", "order", "family", "genus", "species")
 )
 pm <- pm %>% filter(tool != "CONSULT-II (Eq. 6 without unclassified)")
-pm <- pm %>% filter(tool != "CONSULT-II (Eq. 7)")
+pm <- pm %>% filter(tool != "CONSULT-II (Eq. 7 without unclassified)")
+pm <- pm %>% filter(tool != "CONSULT-II (Eq. 6)")
 pm$tool <- factor(
   pm$tool,
-  levels = c("CLARK", "CONSULT-II (Eq. 6)", "Bracken")
+  levels = c("CLARK", "CONSULT-II (Eq. 7)", "Bracken")
 )
 pm <- pm %>%
   group_by(rank, tool, metric) %>%
@@ -32,7 +33,7 @@ bc_plot <- ggplot(pm %>% filter(metric == "Bray-Curtis distance"), mapping = aes
   xlim(0, NA) +
   theme_minimal_vgrid(font_size = 15) +
   labs(color = "Tool", y = "", x = "Bray-Curtis dissimilarity to true profile") +
-  scale_colour_brewer(palette = "Dark2") +
+  scale_colour_manual(values = c("#1b9e77", "black", "#a6cee3")) +
   theme(strip.background = element_rect(fill = "gray")) +
   theme(axis.text.y = element_blank(), axis.text.x = element_text(vjust = 0.5, hjust = 1, size=9)) +
   theme(aspect.ratio = 0.4, panel.spacing.x = unit(1.5, "lines")) +
@@ -44,7 +45,7 @@ se_plot <- ggplot(pm %>% filter(metric == "Shannon equitability"), mapping = aes
   xlim(0, NA) +
   theme_minimal_vgrid(font_size = 15) +
   labs(color = "Tool", y = "", x = "Shannon's equitability (absolute difference to gold standard)") +
-  scale_colour_brewer(palette = "Dark2") +
+  scale_colour_manual(values = c("#1b9e77", "black", "#a6cee3")) +
   theme(strip.background = element_rect(fill = "gray")) +
   theme(axis.text.y = element_blank(), axis.text.x = element_text(vjust = 0.5, hjust = 1, size=9)) +
   theme(aspect.ratio = 0.4, panel.spacing.x = unit(1.5, "lines")) +

@@ -4,8 +4,8 @@ require(cowplot)
 require(dplyr)
 library(tidyr)
 
-mm <- read_tsv("../results/results_profiling-marine-vt1000-norm_genome_sizes-n_f1/results.tsv")
-sm <- read_tsv("../results/results_profiling-strain_madness-vt1000-norm_genome_sizes-n_f1/results.tsv")
+mm <- read_tsv("../results/profile-filtered_tv1000-norm_genome_sizes-marine/results.tsv")
+sm <- read_tsv("../results/profile-filtered_tv1000-norm_genome_sizes-strain_madness/results.tsv")
 mm$Dataset <- "Marine dataset"
 sm$Dataset <- "Strain-madness dataset"
 pm <- rbind(sm, mm)
@@ -126,7 +126,7 @@ p1
 tm$`Unweighted UniFrac (CAMI) (unfiltered)` <- rep((tm %>% filter(is.na(rank)))$`Unweighted UniFrac (CAMI) (unfiltered)`, 8)
 tm$`Weighted UniFrac (CAMI) (unfiltered)` <- rep((tm %>% filter(is.na(rank)))$`Weighted UniFrac (CAMI) (unfiltered)`, 8)
 p2 <- ggplot(tm %>%
-               filter(rank %in% c("genus", "phylum")) %>%
+               filter(rank %in% c("genus", "class")) %>%
                filter(Dataset == "Marine dataset"),
        aes(x = 2-`L1 norm error (unfiltered)`,
            y = 16-`Weighted UniFrac (CAMI) (unfiltered)`,
@@ -139,14 +139,14 @@ p2 <- ggplot(tm %>%
     values=c("black", RColorBrewer::brewer.pal(12,"Paired"))
   ) +
   labs(title = "Marine dataset", x="2 - L1 norm error", y="16 - weighted UniFrac error", shape="", color="Tool") +
-  xlim(1, NA) +
-  ylim(8, NA) +
+  xlim(0, NA) +
+  ylim(0, NA) +
   scale_shape_discrete(guide = "none") +
   theme_cowplot(font_size = 17) +
   theme(panel.spacing.x = unit(1.5, "lines"))
 p2
 p3 <- ggplot(tm %>%
-               filter(rank %in% c("genus", "phylum")) %>%
+               filter(rank %in% c("genus", "class")) %>%
                filter(Dataset == "Strain-madness dataset"),
              aes(x = 2-`L1 norm error (unfiltered)`,
                  y = 16-`Weighted UniFrac (CAMI) (unfiltered)`,
@@ -159,12 +159,12 @@ p3 <- ggplot(tm %>%
     values=c("black", RColorBrewer::brewer.pal(12,"Paired"))
   ) +
   labs(title = "Strain-madness dataset", x="2 - L1 norm error", y="16 - weighted UniFrac error", shape="", color="Tool") +
-  ylim(8, NA) +
-  xlim(1, NA) +
+  ylim(0, NA) +
+  xlim(0, NA) +
   scale_shape_discrete(guide = "none") +
   theme_cowplot(font_size = 17) +
   guides(colour = guide_legend(nrow = 2)) +
   theme(panel.spacing.x = unit(1.5, "lines"))
 p3
-plot_grid(rel_heights=c(8, 1), plot_grid(p2+theme(legend.position = "none"), p3+theme(legend.position = "none"), ncol=2), get_legend(p3 + theme(legend.box.margin = margin(0, 0, 0, 0), legend.position = "bottom", legend.justification = "center")), nrow=2)
+plot_grid(rel_heights=c(8, 1), plot_grid(p2+theme(legend.position = "none"), p3+theme(legend.position = "none"), ncol=2), get_legend(p2 + theme(legend.box.margin = margin(0, 0, 0, 0), legend.position = "bottom", legend.justification = "center")+  guides(colour = guide_legend(nrow = 2))), nrow=2)
 ggsave2("../figures/profiling-cami2_combined-tool_comparison.pdf", width = 16, height = 4.5)

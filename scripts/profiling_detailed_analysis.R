@@ -4,7 +4,8 @@ require(cowplot)
 require(dplyr)
 library(tidyr)
 
-pm <- read_tsv("../results/results_profiling-strain_madness-vt1000-norm_genome_sizes-n_f1/results.tsv")
+pm <- read_tsv("../results/profile-filtered_tv1000-norm_genome_sizes-strain_madness/results.tsv")
+# pm <- read_tsv("../results/profile-filtered_tv1000-norm_genome_sizes-marine/results.tsv")
 pm <- pm %>% filter(rank != "strain")
 pm <- pm %>% group_by(sample, metric) %>% mutate(dvalue = abs(value - value[tool == "Gold standard"]))
 pm <- pm %>% filter(tool != "Gold standard")
@@ -141,5 +142,6 @@ p2 <- ggplot(tm %>% filter(!rank %in% c(NA, "superkingdom")),
 p2
 plot_grid(p1+theme(legend.position = "none"), p2+theme(legend.position = "none"), ncol=2)
 ggsave2("../figures/profiling-strain_madness-tool_comparison.pdf", width = 15, height = 5)
+# ggsave2("../figures/profiling-marine-tool_comparison.pdf", width = 15, height = 5)
 # plot_grid(get_legend(p1 + theme(legend.box.margin = margin(0, 0, 0, 0), legend.position = "bottom", legend.justification = "center")))
 # ggsave2("../figures/profiling-legend-CAMI2.pdf", width = 14, height = 1)

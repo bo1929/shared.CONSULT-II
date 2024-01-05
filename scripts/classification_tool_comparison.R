@@ -26,7 +26,7 @@ scores_spm <- scores_spm %>% filter(Distance_to_closest < 0.9)
 ggplot(scores_spm, aes(x = Distance_to_closest, y = F1, color = Method, linetype = Method, shape = Method)) +
   facet_wrap(vars(Taxonomic_Rank), nrow = 1) +
   geom_point(alpha = 0.5) +
-  labs(shape = "Tool", colour = "Tool", linetype = "Tool", x = "Distance to the closest", y = "F1") +
+  labs(shape = "Tool", colour = "Tool", linetype = "Tool", x = "MinGND", y = "F1") +
   stat_smooth(se = F, span = 0.7, method = "glm", method.args = list(family = binomial), size = 1) +
   scale_colour_brewer(palette = "Dark2") +
   scale_linetype_manual(values = c("22","solid", "42")) +
@@ -51,7 +51,7 @@ ggplot(scores_spm %>%
   facet_wrap(vars(Taxonomic_Rank), nrow = 1) +
   geom_path(aes(group = Distance_to_closest), color = "darkgray") +
   geom_point(aes(group = Method), size = 2.5, alpha = 0.85) +
-  labs(shape = "Tool", colour = "Distance to the closest", x = "Precision", y = "Recall") +
+  labs(shape = "Tool", colour = "MinGND", x = "Precision", y = "Recall") +
   scale_colour_brewer(palette = "Paired") +
   theme_cowplot(font_size = 16) +
   # theme(legend.position = "bottom", legend.justification = "center") +
@@ -74,7 +74,7 @@ ggplot(scores_spm %>%
   facet_wrap(vars(Taxonomic_Rank), nrow = 1) +
   geom_point(size = 3, alpha = 0.85) +
   geom_line(aes(group=Method)) +
-  labs(shape = "Tool", colour = "Tool", x = "Distance to the closest", y = "F1") +
+  labs(shape = "Tool", colour = "Tool", x = "MinGND", y = "F1") +
   scale_colour_brewer(palette = "Dark2") +
   theme_cowplot(font_size = 17) +
   theme(strip.background = element_rect(fill = "gray")) +
