@@ -125,46 +125,50 @@ p1 <- ggplot(tm %>% filter(rank != "na" & rank != "superkingdom"),
 p1
 tm$`Unweighted UniFrac (CAMI) (unfiltered)` <- rep((tm %>% filter(is.na(rank)))$`Unweighted UniFrac (CAMI) (unfiltered)`, 8)
 tm$`Weighted UniFrac (CAMI) (unfiltered)` <- rep((tm %>% filter(is.na(rank)))$`Weighted UniFrac (CAMI) (unfiltered)`, 8)
-p2 <- ggplot(tm %>%
-               filter(rank %in% c("genus", "class")) %>%
-               filter(Dataset == "Marine dataset"),
-       aes(x = 2-`L1 norm error (unfiltered)`,
-           y = 16-`Weighted UniFrac (CAMI) (unfiltered)`,
-           color = tool,
-           shape=grepl("CONS", tool))
-       ) +
-  facet_wrap("rank", scales = "fixed") +
+
+p2 <- tm %>%  filter(Dataset == "Marine dataset" & !is.na(rank)) %>% 
+  group_by(tool,rank=="species") %>% summarize(
+    `Weighted UniFrac (CAMI) (unfiltered)`=mean(`Weighted UniFrac (CAMI) (unfiltered)`),
+    `L1 norm error (unfiltered)`= mean(`L1 norm error (unfiltered)`,na.rm = T))  %>%
+  ggplot(aes(x = 2-`L1 norm error (unfiltered)`,
+             y = 16-`Weighted UniFrac (CAMI) (unfiltered)`,
+             color = tool,
+             shape=grepl("CONS", tool))
+  ) +
   geom_point(size=3, alpha=0.8) +
+  facet_wrap(~`rank == "species"`,labeller = function(x) {x[1,1]="Higher ranks";x[2,1]="Species";x})+
   scale_colour_manual(
     values=c("black", RColorBrewer::brewer.pal(12,"Paired"))
   ) +
   labs(title = "Marine dataset", x="2 - L1 norm error", y="16 - weighted UniFrac error", shape="", color="Tool") +
-  xlim(0, NA) +
-  ylim(0, NA) +
+  ylim(8, NA) +
+  xlim(1, NA) +
   scale_shape_discrete(guide = "none") +
   theme_cowplot(font_size = 17) +
-  theme(panel.spacing.x = unit(1.5, "lines"))
+  guides(colour = guide_legend(nrow = 2)) +
+  theme(panel.spacing.x = unit(1.5, "lines"), legend.position = "none")
 p2
-p3 <- ggplot(tm %>%
-               filter(rank %in% c("genus", "class")) %>%
-               filter(Dataset == "Strain-madness dataset"),
-             aes(x = 2-`L1 norm error (unfiltered)`,
+p3 <- tm %>%  filter(Dataset == "Strain-madness dataset" & !is.na(rank)) %>% 
+  group_by(tool,rank=="species") %>% summarize(
+    `Weighted UniFrac (CAMI) (unfiltered)`=mean(`Weighted UniFrac (CAMI) (unfiltered)`),
+    `L1 norm error (unfiltered)`= mean(`L1 norm error (unfiltered)`,na.rm = T))  %>%
+  ggplot(aes(x = 2-`L1 norm error (unfiltered)`,
                  y = 16-`Weighted UniFrac (CAMI) (unfiltered)`,
                  color = tool,
                  shape=grepl("CONS", tool))
 ) +
-  facet_wrap("rank", scales = "fixed") +
   geom_point(size=3, alpha=0.8) +
+  facet_wrap(~`rank == "species"`,labeller = function(x) {x[1,1]="Higher ranks";x[2,1]="Species";x})+
   scale_colour_manual(
     values=c("black", RColorBrewer::brewer.pal(12,"Paired"))
   ) +
   labs(title = "Strain-madness dataset", x="2 - L1 norm error", y="16 - weighted UniFrac error", shape="", color="Tool") +
-  ylim(0, NA) +
-  xlim(0, NA) +
+  ylim(8, NA) +
+  xlim(1, NA) +
   scale_shape_discrete(guide = "none") +
   theme_cowplot(font_size = 17) +
   guides(colour = guide_legend(nrow = 2)) +
-  theme(panel.spacing.x = unit(1.5, "lines"))
+  theme(panel.spacing.x = unit(1.5, "lines"), legend.position = "none")
 p3
 plot_grid(rel_heights=c(8, 1), plot_grid(p2+theme(legend.position = "none"), p3+theme(legend.position = "none"), ncol=2), get_legend(p2 + theme(legend.box.margin = margin(0, 0, 0, 0), legend.position = "bottom", legend.justification = "center")+  guides(colour = guide_legend(nrow = 2))), nrow=2)
 ggsave2("../figures/profiling-cami2_combined-tool_comparison.pdf", width = 16, height = 4.5)
