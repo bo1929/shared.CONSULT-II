@@ -41,7 +41,7 @@ ggsave2("../figures/classification_size_comparison-bacteria-1.pdf", width = 15, 
 ggplot(scores %>% filter(Method != "CONSULT-II 18Gb (0.03)"), aes(x = Distance_to_closest, y = F1, color = Method, linetype = Method, shape = Method)) +
   facet_wrap(vars(Taxonomic_Rank), nrow = 1) +
   geom_point(alpha = 0.5) +
-  labs(shape = "Tool", colour = "Tool", linetype = "Tool", x = "MinGND", y = "F1") +
+  labs(shape = "Tool", colour = "Tool", linetype = "Tool", x = "Distance to the closest (MinGND)", y = "F1") +
   stat_smooth(se = F, span = 0.7, method = "glm", method.args = list(family = binomial), size = 1.25) +
   theme_cowplot(font_size = 17) +
   scale_colour_manual(values = c("#d95f02", "#a6761d", "#7570b3")) +

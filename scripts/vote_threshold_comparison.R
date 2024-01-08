@@ -18,7 +18,7 @@ ggplot(scores_cc, aes(x = Precision, y = Recall, color = Distance_to_closest, sh
   facet_wrap(vars(Taxonomic_Rank), nrow = 1) +
   geom_path(aes(group = Distance_to_closest), color = "darkgray") +
   geom_point(aes(group = Method), size = 2.5, alpha = 0.85) +
-  labs(shape = "Vote threshold", colour = "Distance to the closest", x = "Precision", y = "Recall") +
+  labs(shape = "Vote threshold", colour = "MinGND", x = "Precision", y = "Recall") +
   scale_colour_brewer(palette = "Paired") +
   theme_cowplot(font_size = 16) +
   theme(legend.text = element_text(size = 12.75), legend.title = element_text(size = 14)) +
@@ -30,7 +30,7 @@ ggplot(scores_cc, aes(x = Distance_to_closest, y = F1, shape = Method)) +
   facet_wrap(vars(Taxonomic_Rank), nrow = 1) +
   geom_line(aes(group = Method, linetype = Method, color = Method)) +
   geom_point(size = 1.75, alpha = 0.85, aes(shape = Method, color = Method)) +
-  labs(color = "Vote threshold", shape = "Vote threshold", linetype = "Vote threshold", x = "Distance to the closest", y = "F1") +
+  labs(color = "Vote threshold", shape = "Vote threshold", linetype = "Vote threshold", x = "Distance to the closest (MinGND)", y = "F1") +
   scale_colour_brewer(palette = "Set1") +
   scale_linetype_manual(values = c("22", "32", "42")) +
   theme_cowplot(font_size = 17) +
