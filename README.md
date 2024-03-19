@@ -3,6 +3,7 @@
 - [WoL: Reference Phylogeny for Microbes (bacteria and archaea) (140 Gb - large but performant with defaults)](https://ter-trees.ucsd.edu/data/consult/CONSULT-II/library-v020-WoL140G.tar.gz)
 - [WoL: Reference Phylogeny for Microbes (bacteria and archaea) (32 Gb - lighter-weight but still highly accurate)](https://ter-trees.ucsd.edu/data/consult/CONSULT-II/library-v030-WoL32G.tar.gz)
 - [WoL: Reference Phylogeny for Microbes (bacteria and archaea) (18 Gb - lightweight and robust)](https://ter-trees.ucsd.edu/data/consult/CONSULT-II/library-v030-WoL18G.tar.gz)
+- [Taxonomy lookup tables for all WoL libraries](https://github.com/bo1929/shared.CONSULT-II/raw/master/misc/taxonomy_lookup-RefSeq2019.tar.gz)
 
 ## Queries used for read classification experiments
 - Simulated short reads from bacterial genomes: [download](https://ter-trees.ucsd.edu/data/consult/CONSULT-II/bacteria_queries_sampreads.tar.gz)
@@ -23,6 +24,10 @@ Mash distances to the closest genomes (MinGND) for each archaeal query that we u
 Taxon ID mapping for reference genomes across different ranks (uDance dataset, includes bacterial queries).
 - `./misc/10kBacteria-ranks_tid.tsv`:
 Taxon ID mapping for reference genomes across different ranks (WoL dataset, includes references and archaeal queries).
+- `./misc/taxonomy_lookup-WoLv1.tar.gz`:
+Taxonomy lookup tables for library build using WoL-v1 dataset for read classification experiments. Needed for classification/profiling.
+- `./misc/taxonomy_lookup-RefSeq2019.tar.gz`:
+Taxonomy lookup tables for library build using RefSeq 2019 snapshot for CAMI-II challenge. Needed for classification/profiling.
 ## results
 - `./results/profile-filtered_tv1000-norm_genome_sizes-marine.tar.gz`
 CAMI-II marine dataset profiling results from all methods combined without genome size correction, OPAL output with `-n` option, `tv1000`     stands for the total vote threshold of 1000 for the entire sample.
