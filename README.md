@@ -3,7 +3,7 @@
 - [WoL: Reference Phylogeny for Microbes (bacteria and archaea) (140 Gb - large but performant with defaults)](https://ter-trees.ucsd.edu/data/consult/CONSULT-II/library-v020-WoL140G.tar.gz)
 - [WoL: Reference Phylogeny for Microbes (bacteria and archaea) (32 Gb - lighter-weight but still highly accurate)](https://ter-trees.ucsd.edu/data/consult/CONSULT-II/library-v030-WoL32G.tar.gz)
 - [WoL: Reference Phylogeny for Microbes (bacteria and archaea) (18 Gb - lightweight and robust)](https://ter-trees.ucsd.edu/data/consult/CONSULT-II/library-v030-WoL18G.tar.gz)
-- [Taxonomy lookup tables for all WoL libraries](https://github.com/bo1929/shared.CONSULT-II/raw/master/misc/taxonomy_lookup-RefSeq2019.tar.gz)
+- [Taxonomy lookup tables for all WoL-v1 libraries](https://github.com/bo1929/shared.CONSULT-II/raw/master/misc/taxonomy_lookup-RefSeq2019.tar.gz)
 
 ## Queries used for read classification experiments
 - Simulated short reads from bacterial genomes: [download](https://ter-trees.ucsd.edu/data/consult/CONSULT-II/bacteria_queries_sampreads.tar.gz)
